@@ -1,0 +1,41 @@
+/* 請記得掛==========================================
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script> */
+
+/* =================================================slide-icon============================================= */
+
+.slider-left,.slider-right{
+    max-width: 50%;
+    position: relative;
+ }
+ 
+ /* slide左右<>按鈕移進圖片 */
+ .slider-left i::before,.slider-right i::before{
+     font-size: 48px;
+     opacity: .8;
+ }
+ .slider-left  .slider-icon:hover i::before,.slider-right  .slider-icon:hover i::before{
+     opacity: 1;
+ }
+ .slider-left .slider-icon,.slider-right .slider-icon{
+     z-index: 3;
+     position: absolute;
+     height: 100%;
+     width: 70%;
+ }
+ 
+ .slider_left img,.slider_right img{
+     background: linear-gradient(#fff 50%);
+ }
+ 
+ .slider-left div{
+     top: 0;
+     left: 0;
+ }
+ .slider-right div{
+     top: 0;
+     right: 0;
+ }

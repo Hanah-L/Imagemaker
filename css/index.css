@@ -1,0 +1,227 @@
+/*======================================== leading page ===============================================*/
+.leading_page{
+    overflow: hidden;
+}
+.leading_pageBox{
+    width: 100%;
+    transition: all .5s;
+}
+.leading_pageBox a{
+    width: 10%;
+}
+.leading_pageBox img{
+    width: 100%;
+    transition: all .5s;
+}
+.leading_pageBox.box-right{
+    transform: translateX(8%);
+}
+.leading_pageBox.box-left{
+    transform: translateX(-8%);
+}
+.leading_page .logofont{
+    text-align: center;
+    padding: 16px 0;
+    transition: all .5s;
+}
+.leading_page .logofont span{
+    font-family:'Italianno';
+    font-size: 10rem;
+    width: 100%;
+    transition: all .5s;
+}
+.leading_page .logofont span::after{
+    content: "藉由香水，營造屬於你的專屬形象";
+    position: absolute;
+    bottom:30px;
+    right: 0;
+    font-size: 18.72px;
+    font-family: 'Noto Sans TC',  arial, sans-serif;
+
+}
+@media all and (max-width:768px){
+    .leading_pageBox{
+        margin: 2em 0;
+        width: 120%;
+    }
+       .leading_pageBox a{
+        width: 30%;
+    }
+
+    .leading_pageBox.box-right{
+        transform: translateX(10%);
+    }
+    .leading_page .logofont span{
+        font-size: 4rem;
+    }
+    .leading_page .logofont span::after{
+        right: -30px;
+        bottom:10px;
+        font-size: 12px;
+    
+    }
+}
+    /*======================================== Situation =============================================== */
+.indexTitle{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    /* margin: 20px 10%; */
+}
+.situationTitle{
+    font-weight: 600;
+}
+.col-2-5{
+    width:100%;
+        flex-direction:row;
+        order:0;
+}
+.col-3-5{
+    width: 100%;
+        flex-direction:row;
+        order:1;
+}
+.situationBox{
+    width: 100%;
+    overflow: hidden;
+}
+.situationBox>div{
+    width: 200%;
+    position: relative;
+    left:-0;
+    transition: all .5s;
+    /* slider效果 */
+}
+.situationBox>div>div{
+    width: 100%;
+    flex-direction:column;
+}
+.col-2-5 .imgBox_inner,.col-3-5 .imgBox_inner {
+  flex: 1 0 0;
+}
+
+.situationBox .imgBox_inner .image{
+    height: 76%;
+    top:30px ;
+}
+.situationBox a{
+    display: inline;
+}
+@media all and (max-width:768px){
+.indexTitle{
+    position: relative;
+    left: 5px;
+    top:0;
+    margin: 30px 0;
+}
+.situation .container{
+    padding: 0;
+}
+.col-2-5,.col-3-5{
+        flex-direction:column;
+    }
+    .col-3-5{
+        flex: 1 0 0;
+        order:0;
+    }
+    .col-2-5{
+        flex: 2 0 0;
+        order:1;
+    }
+    .situationBox>div{
+        padding: 0 16px;
+
+    }
+    .situationBox>div>div{
+        flex-direction: row;
+        flex: 0 0 70%;
+    }
+    .situationBox .imgBox_inner .image{
+        top:0px ;
+    }
+}
+
+/* ==============================================================About ===========================================*/
+.about .mask{
+    background:  linear-gradient(0deg, rgba(233, 233, 233, 0.23), rgba(233, 233, 233, 0.23)), linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(122.61deg, rgba(255, 255, 255, 0.79) 19.34%, rgba(255, 255, 255, 0) 55.92%), url(../images/assorted-color-leaves-2652346.jpg)center center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+.about .logoPicture{
+    position: absolute;
+    width:20%;
+    left:50px;
+    top:-3px;
+}
+.section_left,.section_right{
+    width:50%;
+}
+.section_all{
+    padding-top:20% ;
+}
+.contact{
+    border-radius: 4px;
+    padding:10px;
+    margin-left: 30%;
+    position: relative;
+}
+.about .title{
+font-weight: 400;
+}
+.contact_bg{
+    width: 100%;
+    height: 100%;
+    padding: 16px;    
+}
+.contact_bg .bg{
+    background: rgba(226, 226, 226, 0.77);
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.contact_bg li{
+    padding: 15px 0;
+    font-size: 0.83em;
+}
+.contact_bg input,.contact_bg textarea{
+    width: 100%;
+}
+
+.contact .btn{
+    bottom:0;
+    left:75%;
+    width: 74px;
+    padding: 0;
+    text-align: center;
+
+}
+@media all and (max-width:768px){
+.section_all{
+    flex-direction:column;
+    padding-top:10%;
+}
+.section_left,.section_right{
+    width:100%;
+}
+.section_left{
+    padding: 0 16px;
+}
+.about .logoPicture{
+    position: absolute;
+    width:30%;
+    left:50px;
+    top:5px;
+}
+.contact{margin-left: 0%;
+}
+}

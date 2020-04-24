@@ -1,0 +1,57 @@
+/* ==================lightbox格式===================== */
+/*  HTML結構==========================================
+<section class="Lightbox 名稱 none">
+            <div class="fake">
+                <!-- 加一個假的底當感應區 -->
+            </div>
+            <div class="d-flex  position-relative align-items-center">
+                <!-- 內容 -->
+            </div>
+        </section> 
+        
+        */
+ /* 請記得掛==========================================
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script> */
+
+    /* TODO還沒寫漸變 */
+        /* TODO 要寫close */
+body.turnLight{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+ }
+
+ .Lightbox.none{
+    display: none;
+}
+.Lightbox .fake{
+    position: fixed;
+    background: #3a4035c2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.Lightbox{
+    display:block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+@media all and (max-width: 768px){
+    body.turnLight{
+       width: 100vw;
+       height: auto;
+       overflow: unset;
+    }
+.Lightbox{
+    position: absolute;
+}
+ }

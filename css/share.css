@@ -1,0 +1,249 @@
+/*======================================== Share=============================================== */
+.imgBox_group{
+    /* padding-top: 100px; */
+    align-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+.share2{
+    width: 20%;
+}
+.share1{
+    width: 40%;
+}
+.share1.order{
+    order:1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.share3{
+    width: 60%;
+}
+.share3.order{
+    order:0;
+}
+.share4{
+    width: 40%;
+}
+.share4>div{
+    width: 50%;
+}
+.imgBox_inner{
+    padding: 16px;
+}
+.imgBox_group .col-4{
+    /* 圖片大小不一拿掉格線的padding */
+    padding: 0;
+}
+.shareText{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .9);
+    color: #3A4035;
+    opacity: 0;
+    transition: .5s;
+    /* text-align: center; */
+}
+.shareText:hover{
+    opacity: 1;
+}
+.shareText .d-flex{
+    flex-wrap: wrap;
+    height: 100%;
+}
+.shareText .icon-star{
+    letter-spacing: 1px;
+}
+@media (max-width:768px){
+.indexTitle{
+    position: relative;
+    left: 5px;
+    top: 10px;
+    margin: 30px 0;
+}
+.share2{
+    width:33.33%;
+}
+.share1{
+    width: 66.66%;
+}
+.share1.order{
+    order:0;
+    position: relative;
+}
+.share3{
+    width: 100%;
+}
+.share3.order{
+    order:1;
+}
+.share4{
+    width: 33.33%;
+}
+.share4>div{
+    width: 100%;
+}
+.imgBox_inner{
+    padding: 4px;
+}
+}
+/* ========================share-lightbox================================ */
+.sharebox {
+    max-width: 1400px;
+    width: 95%;
+    max-height: 800px;
+    height: 80vh;
+    border: 3px solid #3a4035;
+    background: #f9f9f9;
+    border-radius: 2px;
+    padding:16px;
+    margin:5rem auto;
+}
+
+.share-left,
+.share-right{
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+}
+.share-left{
+    width: 100%;
+    height: 100%;
+}
+.share-left>div {
+    width: 100%;
+ 
+
+}
+
+.product_pic {
+    height: 40%;
+    background: white;
+    box-shadow: 0px 4px 10px #00000029;
+}
+
+.product_pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.share-con {
+    padding: 16px;
+}
+
+.product_name {
+    max-width: 100%;
+    height: 20%;
+    padding: 32px;
+    background: #3a4035;
+}
+
+.product_name h1 {
+    color: #fff;
+}
+
+.product_name div {
+    position: absolute;
+    right: -32px;
+    bottom: 16px;
+    box-shadow: 2px 3px 3px #00000048;
+}
+
+.product_name div:hover {
+    box-shadow: 2px 3px 3px #00000023;
+    transform: translateY(1px);
+
+}
+
+.lable-btn {
+    padding-left: 30px;
+    padding-right: 21px;
+    height: 30px;
+    background: #BF2944;
+    clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 0% 100%);
+    color: #fff;
+}
+
+.others {
+    flex: 1 0 0;
+    overflow: scroll;
+}
+
+
+.others>div::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #3a4035;
+}
+
+.sharebox h6,
+.share-left h5 {
+    font-weight: 300;
+    margin: 4px 0;
+    line-height: 2.5;
+    letter-spacing: .5px;
+}
+
+.share-left h5 {
+    width: 100%;
+    padding: 16px 0;
+}
+
+.sharebox h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+@media all and (max-width: 768px) {
+    .shareLightbox {
+        width:auto;
+        height:auto;
+    }
+    .sharebox {
+        width: 95%;
+        height: auto;
+        border: none;
+        flex-direction: column;
+        max-width:none;
+        max-height:none;
+        align-self: flex-start;
+        margin-top: 10rem;
+    }
+    .share-left,
+    .share-right{
+        padding: 0;
+}
+.product_name.desktop-none{
+    height: 20vh;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 101;
+
+}
+  
+    .product_name div {
+        right: -16px;
+    }
+    .share-con .d-flex{
+        flex-wrap: wrap;
+    }
+    
+    .others {
+        flex: 1 0 0;
+        overflow: unset;
+    }
+}

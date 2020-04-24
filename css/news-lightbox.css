@@ -1,0 +1,59 @@
+/* 圖片外面的範圍給寬 */
+.newsLightbox {
+    max-width: 1400px;
+    max-height: 800px;
+    background: #f9f9f9;
+    /* 文字區域垂直置中 */
+    align-items: center;
+    align-self: center;
+    padding: 30px;
+    margin: auto;
+}
+
+/* 圖片本身完全展開，再用object-fit:cover去套 */
+.newsLightbox img {
+    max-width: 50%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.newsLightbox .txt {
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.newsLightbox .txt h2,
+.newsLightbox .txt h3,
+.newsLightbox .txt p {
+    color: #3A4035;
+}
+
+.newsLightbox .txt h2 {
+    text-align: center;
+}
+
+.newsLightbox .txt h3 {
+    text-align: right;
+    padding-top: 1em;
+}
+
+.newsLightbox .txt p {
+    line-height: 1.5em;
+}
+
+@media all and (max-width: 768px) {
+    .newsLightbox {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .newsLightbox img {
+        max-width: 100%;
+    }
+
+    .newsLightbox.txt {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+}
