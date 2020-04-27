@@ -9,13 +9,11 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
-    <!-- <link rel="stylesheet" href="css/plugin/jquery.fancybox.css"> -->
-    <link rel="stylesheet" href="css/plugin/animate.css">
     <link rel="stylesheet" href="css/component.css">
-    <style> 
-        * {
-            /* border: 1px solid red; */
-        }
-    </style>
+    <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/share.css">
+       
+    
 </head>
 <body>

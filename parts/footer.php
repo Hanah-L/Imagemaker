@@ -1,9 +1,11 @@
  <!-- Start Footer -->
  <footer class="footer">
             <!-- bread -->
-            <a href="index.html" class="bread mobile-none">首頁</a>
+            <a href="imagemaker.php" class="bread mobile-none">首頁</a>
+            <!-- <a href="index.html" class="bread mobile-none">首頁</a> -->
             <nav class="navbar ">
-                <a class="logo-font" href="index.html">Image Maker</a>
+                <a class="logo-font" href="imagemaker.php">Image Maker</a>
+                <!-- <a class="logo-font" href="index.html">Image Maker</a> -->
                 <i class="icon icon-down-open  desktop-none font-white "></i>
                 <ul class="row mobile-none">
                     <li class="nav"><a href="shop.html">商店專區</a></li>

@@ -2,9 +2,592 @@
 <?php include __DIR__ . '/parts/header.php'; ?>
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 
-<div class="container">
-    <!-- 首頁定版後加入此 -->
-<h2>Welcome</h2>
+   
+<!-- Start leading page -->
+    <!-- TODO要做首頁動畫 -->
+    <section class="leading_page">
+        <div class="leading_pageBox box-left d-flex justify-content-around">
+            <a href=""> <img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+            <a href=""> <img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+            <a href=""><img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+        </div>
+        <div class="leading_pageBox box-right d-flex justify-content-around">
+            <a href=""> <img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+            <a href=""> <img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+            <a href=""><img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+        </div>
+        <div class="logofont">
+            <span>Image Maker</span>
+        </div>
+        <div class="leading_pageBox box-right d-flex justify-content-around">
+            <a href=""> <img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+            <a href=""> <img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+            <a href=""><img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+        </div>
+        <div class="leading_pageBox box-left d-flex justify-content-around">
+            <a href=""> <img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+            <a href=""> <img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+            <a href=""><img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
+        </div>
+    </section>
+    <!-- End leading page -->
+    
+    <!-- TODO slider效果 -->
+    <!-- Start Situation -->
+    <section class="situation">
+        <h1 class="indexTitle font-black">香水情境</h1>
+        <div class="container">
+            <div class="situationBox">
+                <div class="d-flex">
+                    <div class="d-flex">
+                        <div class="col-2-5 d-flex">
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href="#"><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-3-5 d-flex">
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="col-2-5 d-flex">
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <img class="image" src="images/pexels-photo-360624.jpeg" alt="">
+                            </div>
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-3-5 d-flex">
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                            <div class="imgBox_inner">
+                                <div class="text">
+                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <p>不踩雷，網友最愛，就送這個吧！</p>
+                                </div>
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Situation  -->
+
+    <!-- Start Share -->
+    <!--TODO Start Share 轉成PHP-->
+    <!-- TODO index與news頁面標題不一致 -->
+    <!-- TODO hover內容 -->
+    <section class="share">
+        <h1 class="indexTitle font-black">染香分享</h1>
+        <div class="container">
+            <div class="imgBox_group row">
+                <div class="share1">
+                    <div class="imgBox">
+                        <div class="imgBox_inner">
+
+                            <div class="shareText">
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <h3>後味很迷人</h3>
+                                    <div><i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                    </div>
+                                    <h3>2020/04/23</h3>
+                                </div>
+                            </div>
+                            <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="share2 flex-column">
+                    <div class="imgBox_inner">
+
+                        <div class="shareText">
+                            <div class="d-flex justify-content-around align-items-center">
+                                <h3>後味很迷人</h3>
+                                <div><i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                </div>
+                                <h3>2020/04/23</h3>
+                            </div>
+                        </div>
+                        <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                    </div>
+                    <div class="imgBox_inner">
+
+                        <div class="shareText">
+                            <div class="d-flex justify-content-around align-items-center">
+                                <h3>後味很迷人</h3>
+                                <div><i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                </div>
+                                <h3>2020/04/23</h3>
+                            </div>
+                        </div>
+                        <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                    </div>
+                </div>
+                <div class="share4 row">
+                    <div>
+                        <div class="imgBox_inner">
+
+                            <div class="shareText">
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <h3>後味很迷人</h3>
+                                    <div><i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                    </div>
+                                    <h3>2020/04/23</h3>
+                                </div>
+                            </div>
+                            <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="imgBox_inner">
+
+                            <div class="shareText">
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <h3>後味很迷人</h3>
+                                    <div><i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                    </div>
+                                    <h3>2020/04/23</h3>
+                                </div>
+                            </div>
+                            <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="share3 row order">
+                    <div class="col-4">
+                        <div class="imgBox">
+                            <div class="imgBox_inner">
+
+                                <div class="shareText">
+                                    <div class="d-flex justify-content-around align-items-center">
+                                        <h3>後味很迷人</h3>
+                                        <div><i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                        </div>
+                                        <h3>2020/04/23</h3>
+                                    </div>
+                                </div>
+                                <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="imgBox">
+                            <div class="imgBox_inner">
+
+                                <div class="shareText">
+                                    <div class="d-flex justify-content-around align-items-center">
+                                        <h3>後味很迷人</h3>
+                                        <div><i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                        </div>
+                                        <h3>2020/04/23</h3>
+                                    </div>
+                                </div>
+                                <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="imgBox">
+                            <div class="imgBox_inner">
+
+                                <div class="shareText">
+                                    <div class="d-flex justify-content-around align-items-center">
+                                        <h3>後味很迷人</h3>
+                                        <div><i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                            <i class="icon icon-star"></i>
+                                        </div>
+                                        <h3>2020/04/23</h3>
+                                    </div>
+                                </div>
+                                <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="share1 order">
+                    <div class="imgBox_inner">
+
+                        <div class="shareText">
+                            <div class="d-flex justify-content-around align-items-center">
+                                <h3>後味很迷人</h3>
+                                <div><i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                    <i class="icon icon-star"></i>
+                                </div>
+                                <h3>2020/04/23</h3>
+                            </div>
+                        </div>
+                        <img class="image" src="./images/01._Tender_bottle_1800x1800.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Lightbox shareLightbox none">
+        <div class="fake"></div>
+        <div class="sharebox d-flex justify-content-between">
+            <div class="product_name desktop-none">
+                <h1>商品名稱</h1>
+                <div>
+                    <a class="lable-btn" href="">前往商品詳細介紹></a>
+                </div>
+            </div>
+            <!-- 染香分享 左邊:商品圖、標題、星級評分、分享內容 -->
+            <div class="share-left">
+                <div class="product_pic">
+                    <img src="./images/01._Tender_bottle_1800x1800.png" alt="">
+                </div>
+                <!-- 標題、星級評分、日期 -->
+                <div class="share-con ">
+                    <div class="d-flex justify-content-between">
+                        <h4>後味很迷人給人典雅、溫和的氣, 它是一款偏中性的香水</h4>
+                        <div class="score d-flex align-items-center">
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star-empty"></i>
+                            <i class="icon-star-empty"></i>
+                        </div>
+                        <h3>2020/04/01</h3>
+                    </div>
+
+                    <!-- 分享內容 -->
+                    <h5>後味很迷人，給人典雅、溫和的氣, 它是一款偏中性的香水，任何季節噴它都適合^^ ! 想要更持久噴個3~4下，可以維持一整天
+                        ,它的包裝和瓶身都非常有質感，蓋子好像是金屬的，上面還有壓字HM
+                        ,送禮自用兩相宜^^ 真心推薦!!後味很迷人，給人典雅、溫和的氣, 它是一款偏中性的香水，任何季節噴它都適合^^ ! 想要更持久噴個3~4下，可以維持一整天</h5>
+                </div>
+            </div>
+
+            <!-- 染香分享 右邊:三篇同商品的標題、星級評分、內容 -->
+            <div class="share-right-up d-flex flex-column">
+                <div class="product_name mobile-none">
+                    <h1>商品名稱</h1>
+                    <div>
+                        <a class="lable-btn" href="">前往商品詳細介紹></a>
+                    </div>
+                </div>
+                <div class="share-right d-flex flex-column">
+                    <div class="others">
+                        <!-- 第1篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>後味很迷人</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>後味很迷人，給人典雅、溫和的氣, 它是一款偏中性的香水，任何季節噴它都適合^^ ! 想要更持久噴個3~4下，可以維持一整天
+                                ,它的包裝和瓶身都非常有質感，蓋子好像是金屬的，上面還有壓字HM ,送禮自用兩相宜^^ 真心推薦!!後味很迷人，給人典雅、溫和的氣,
+                                它是一款偏中性的香水，任何季節噴它都適合^^ !
+                                想要更持久噴個3~4下，可以維持一整天</h6>
+                        </div>
+
+                        <!-- 第2篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>後味很迷人</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>後味很迷人，給人典雅、溫和的氣, 它是一款偏中性的香水，任何季節噴它都適合^^ ! 想要更持久噴個3~4下，可以維持一整天
+                                ,它的包裝和瓶身都非常有質感，蓋子好像是金屬的，上面還有壓字HM ,送禮自用兩相宜^^ 真心推薦!!後味很迷人，給人典雅、溫和的氣,
+                                它是一款偏中性的香水，任何季節噴它都適合^^ !
+                                想要更持久噴個3~4下，可以維持一整天</h6>
+                        </div>
+
+                        <!-- 第3篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>後味很迷人</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>後味很迷人，給人典雅、溫和的氣, 它是一款偏中性的香水，任何季節噴它都適合^^ ! 想要更持久噴個3~4下，可以維持一整天
+                                ,它的包裝和瓶身都非常有質感，蓋子好像是金屬的，上面還有壓字HM ,送禮自用兩相宜^^ 真心推薦!!後味很迷人，給人典雅、溫和的氣,
+                                它是一款偏中性的香水，任何季節噴它都適合^^ !
+                                想要更持久噴個3~4下，可以維持一整天</h6>
+                        </div>
+
+                        <!-- 第4篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>後味很迷人</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>後味很迷人，給人典雅、溫和的氣, 它是一款偏中性的香水，任何季節噴它都適合^^ ! 想要更持久噴個3~4下，可以維持一整天
+                                ,它的包裝和瓶身都非常有質感，蓋子好像是金屬的，上面還有壓字HM ,送禮自用兩相宜^^ 真心推薦!!後味很迷人，給人典雅、溫和的氣,
+                                它是一款偏中性的香水，任何季節噴它都適合^^ !
+                                想要更持久噴個3~4下，可以維持一整天</h6>
+                        </div>
+
+                        <!-- 第5篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>後味很迷人</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>後味很迷人，給人典雅、溫和的氣, 它是一款偏中性的香水，任何季節噴它都適合^^ ! 想要更持久噴個3~4下，可以維持一整天
+                                ,它的包裝和瓶身都非常有質感，蓋子好像是金屬的，上面還有壓字HM ,送禮自用兩相宜^^ 真心推薦!!後味很迷人，給人典雅、溫和的氣,
+                                它是一款偏中性的香水，任何季節噴它都適合^^ !
+                                想要更持久噴個3~4下，可以維持一整天</h6>
+                        </div>
+
+                        <!-- 第6篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>後味很迷人</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>後味很迷人，給人典雅、溫和的氣, 它是一款偏中性的香水，任何季節噴它都適合^^ ! 想要更持久噴個3~4下，可以維持一整天
+                                ,它的包裝和瓶身都非常有質感，蓋子好像是金屬的，上面還有壓字HM ,送禮自用兩相宜^^ 真心推薦!!後味很迷人，給人典雅、溫和的氣,
+                                它是一款偏中性的香水，任何季節噴它都適合^^ !
+                                想要更持久噴個3~4下，可以維持一整天</h6>
+                        </div>
+
+                        <!-- 第7篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>title</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>messange</h6>
+                        </div>
+
+                        <!-- 第8篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>title</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>messange</h6>
+                        </div>
+
+                        <!-- 第9篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>title</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>messange</h6>
+                        </div>
+
+                        <!-- 第10篇 -->
+                        <div class="">
+                            <div class="d-flex justify-content-between">
+                                <h5>title</h5>
+                                <div class="score d-flex align-items-center">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-empty"></i>
+                                    <i class="icon-star-empty"></i>
+                                </div>
+                                <h5>2020/04/01</h5>
+                            </div>
+                            <h6>messange</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Share -->
+
+    <!-- Start About -->
+    <!--TODO 高要減footer -->
+    <section class="about">
+        <div class="mask">
+            <div class="container">
+                <div class="section_all d-flex justify-content-center align-items-center ">
+                    <div class="section_left">
+                        <div class="logo">
+                            <h1 class="title font-black">關於</h1>
+                            <!-- TODO 位置怪怪的 -->
+                            <img class="logoPicture" src="images/SVG/ImageMaker_logo.svg" alt="">
+                        </div>
+                        <h2 class="title font-black pt-5">藉由香水，營造屬於你的專屬形象</h2>
+                        <p>提到香水常使人聯想到奢侈品，但其實香水就像服裝一樣，可以是簡單的日常用品，能簡單體現個人風格、個性，更可以增添個人魅力。<BR><BR>
+
+                            我們希望打破香水的高單價印象，讓它更貼近日常，並藉由香水其味道，讓使用者心情愉悅、增添自信、建立個人風格，留下專屬個人的獨特魅力或印記。<BR><BR>
+
+                            Image Maker將從最基礎的香水知識、如何使用及挑選，並提供各大品牌的香水，讓使用者找到適合自己的味道。
+                        </p>
+                    </div>
+                    <div class="section_right">
+                        <div class="flex-column justify-content-center">
+                            <form action="" class="contact">
+                                <h1 class="font-black">Contact</h1>
+                                <ul class="contact_bg">
+                                    <div class="bg"></div>
+                                    <li>
+                                        <input type="text" placeholder="姓名">
+                                    </li>
+                                    <li>
+                                        <input type="email" placeholder="e-mail">
+                                    </li>
+                                    <li>
+                                        <textarea rows="5">跟我們說話吧！
+                                            </textarea>
+                                    </li>
+                                    <li>
+                                        <input type="submit" class="btn btn--primary">
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About -->
 
 </div>
 <?php include __DIR__ . '/parts/script.php'; ?>

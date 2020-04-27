@@ -4,7 +4,7 @@ $output = [
     'success' => false,
     'post' => $_POST,
 ];
-
+printf("here login api ...1");
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $password = isset($_POST['password']) ? $_POST['password'] : '';
 if(empty($email) or empty($password)){
@@ -14,8 +14,14 @@ if(empty($email) or empty($password)){
 
 $sql = "SELECT * FROM member_list WHERE email=? AND password=SHA1(?)";
 $stmt = $pdo->prepare($sql);
-$stmt->execute([$email, $password]);
+$result = $stmt->execute([$email, $password]);
+if ($result) {
+    ini_set('display_errors111', 1);
+} else {
+    ini_set('display_errors222', 1);
+}
 
+printf("here login api ...2");
 if($stmt->rowCount()){
     $row = $stmt->fetch();
     $_SESSION['loginUser'] = $row;
