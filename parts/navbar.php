@@ -5,8 +5,7 @@ if(!isset($page_name)){
 ?>
 
 <body>
-    <!-- div外包一層nav? 0406-08-login.php -->
-    <div class="wrapper">
+    
         <!-- Start header -->
         <header class="header">
             <nav class="headerclip navbar row">
@@ -27,7 +26,7 @@ if(!isset($page_name)){
                 </ul>
                 <ul class="icon-group--center row">
                     <li> <a href="login.php" class="icon-btn"><i class="icon icon-user"></i></a></li>
-                    <li> <a href="logout.php" class="icon-btn"><i class="icon icon-user-o"></a></li>
+                    <li> <a href="logout.php" class="icon-btn"><i class="icon icon-user-o"></i></a></li>
                     <li> <a href="cart.html" class="icon-btn"><i class="icon icon-basket"></i></a></li>
                 </ul>
             </nav>

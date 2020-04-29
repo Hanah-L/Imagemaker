@@ -45,18 +45,22 @@ if (empty(preg_grep($mobile_re, [$_POST['mobile']]))) {
     exit;
 }
 
-$sql = "UPDATE `member_list` SET `member_num`=?,`name`=?,`email`=?,`gender`=?,`birthday`=?,`mobile`=?,`address`=? WHERE sid=?";
+// $sql = "UPDATE `member_list` SET `member_num`=?,`name`=?,`email`=?,`gender`=?,`birthday`=?,`mobile`=?,`address`=? WHERE sid=?";
+$sql = "UPDATE `member_list` SET `name`=?,`email`=?,`gender`=?,`birthday`=?,`mobile`=?,`city`=?,`county`=?,`address_detail`=? WHERE sid=?";
 
 $stmt = $pdo->prepare($sql);
 
 $stmt->execute([
-    $_POST['member_num'],
+    // $_POST['member_num'],
     $_POST['name'],
     $_POST['email'],
     $_POST['gender'],
     $_POST['birthday'],
     $_POST['mobile'],
-    $_POST['address'],
+    // $_POST['address'],
+    $_POST['city'],
+    $_POST['county'],
+    $_POST['address_detail'],
     $sid
 ]);
 

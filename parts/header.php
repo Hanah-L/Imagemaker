@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/component.css">
-    <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="./css/share.css">
+    <link rel="stylesheet" href="css/share.css">
        
     
 </head>

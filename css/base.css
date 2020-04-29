@@ -51,7 +51,7 @@
  */
 
 html {
-    line-height: 1.15;
+    /* line-height: 1.15; */
     /* 1 */
     -webkit-text-size-adjust: 100%;
     /* 2 */
@@ -467,7 +467,7 @@ template {
 /* Add reset */
 
 * {
-    position: relative;
+    /* position: relative; */
     box-sizing: border-box;
 }
 
@@ -539,10 +539,10 @@ template {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    margin: 18px, 0;
+    /* margin: 18px, 0; */
     height: 30px;
     line-height: 30px;
-    padding: 0 42px;
+    /* padding: 0 42px; */
     min-width: 74px;
     box-sizing: border-box;
     font-size: 16px;
@@ -553,7 +553,7 @@ template {
     background-color: #bf2944;
     border: 0;
     border-radius: 2px;
-    box-shadow: 2px 3px 3px rgba(0, 0, 0, .3);
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, .25);
     outline: 0;
     cursor: pointer;
     user-select: none;
@@ -723,6 +723,46 @@ template {
     font-weight: 900;
 }
 
+/* lable-btn
+--------------------------- */
+/*  <div class="lable-btn ">
+                <文字標籤 class="clip-rd/依切角位置/">內容</文字標籤>
+     </div> */
+     .lable-btn{
+        height: 100%;
+        filter: drop-shadow(2px 3px 3px #00000048);
+         /* box-shadow: 2px 3px 3px #00000048; */
+     }
+     
+     .lable-btn:hover {
+        filter: drop-shadow(2px 3px 3px #00000023);
+         /* box-shadow: 2px 3px 3px #00000023; */
+         transform: translateY(1px);
+     }
+     .clip-lt,.clip-ld,.clip-rt,.clip-rd{
+         height: 30px;
+         line-height: 30px;
+     }
+     .lable-btn .clip-lt{
+         padding-left: 30px;
+         padding-right: 21px;
+         clip-path: polygon(calc(0% + 30px) 0%, 100% 0%, 100% 100%, 0% 100%);
+     }
+     .lable-btn .clip-ld {
+         padding-left: 30px;
+         padding-right: 21px;
+         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, calc(0% + 30px) 100%);
+     }
+     .lable-btn .clip-rd{
+         padding-right: 30px;
+         padding-left: 21px;
+         clip-path: polygon(0 0, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
+     } 
+     .lable-btn .clip-rt{
+         padding-right: 30px;
+         padding-left: 21px;
+         clip-path: polygon(0 0,  calc(100% - 30px) 0%,100% 100%, 0% 100%);
+     } 
 
 /*-------------------------*/
 
@@ -752,15 +792,68 @@ ol,
 a,
 div {
     margin: 0;
+    font-weight: 300;
     color: #3a4035;
     font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+/* h1 {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+h3 {
+    font-size: 18.72px;
+    font-weight: 300;
+    line-height: 18.72px;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+h5 {
+    font-size: 13.28px;
+    font-weight: 300;
+    line-height: 13.28px;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0;
+} */
+
+.font-light {
+    font-weight: 100;
+}
+
+.font-bold {
+    font-weight: 500;
 }
 
 .subtitle {
     font-size: 48px;
     font-weight: 600;
     line-height: 48px;
-    margin: 20px 0;
+    /* margin: 20px 0; */
     padding-top: 10px;
     color: #BEBFBC;
     text-align: start;

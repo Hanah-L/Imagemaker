@@ -1,6 +1,15 @@
 <?php
 require __DIR__ . '/_connect_db.php';
 $page_name = 'member_insert';
+
+$sql = "SELECT * FROM county";
+$stmt = $pdo->query($sql);
+$counties = $stmt->fetchAll();
+
+$sqlCity = "SELECT * FROM city";
+$stmtCity = $pdo->query($sqlCity);
+$cities = $stmtCity->fetchAll();
+
 ?>
 
 <?php include __DIR__ . '/parts/header.php'; ?>
@@ -10,8 +19,17 @@ $page_name = 'member_insert';
     .container {
         padding-top: 5em;
     }
+
     .form-group small.form-text {
         color: red;
+    }
+
+    #city option {
+        display: none;
+    }
+
+    #city option.county0 {
+        display: block;
     }
 </style>
 
@@ -35,8 +53,10 @@ $page_name = 'member_insert';
                 </div>
                 <div class="form-group">
                     <label for="gender">性別</label>
-                    <input type="gender" class="form-control" id="gender" name="gender" placeholder="Male / Female">
-                    <small id="genderHelp" class="form-text"></small>
+                    <select type="gender" class="form-control" id="gender" name="gender" placeholder="Male / Female">
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                        <small id="genderHelp" class="form-text"></small>
                 </div>
                 <div class="form-group">
                     <label for="birthday">出生年月日</label>
@@ -48,11 +68,40 @@ $page_name = 'member_insert';
                     <input type="text" class="form-control" id="mobile" name="mobile" pattern="09\d{2}-?\d{3}-?\d{3}">
                     <small id="mobileHelp" class="form-text"></small>
                 </div>
+
                 <div class="form-group">
+                    <label for="address">地址</label>
+                    <!-- <textarea class="form-control" name="address" id="address" cols="30" rows="3">?= htmlentities($row['address']) ?></textarea> -->
+                    <!-- 這裡要如何顯示自動帶入的郵遞區號? -->
+                    <input type="text" class="form-control" name="zipcode" id="zipcode" value="">
+
+                    <select type="text" class="form-control" name="county" id="county" cols="30" rows="3">
+                        <option value="">請選擇縣市</option>
+                        <?php foreach ($counties as $county) { ?>
+                            <option value="<?= $county["sn"] ?>"><?= $county["name"] ?></option>
+                        <?php } ?>
+                    </select>
+                    <!-- 選擇縣市，連接county.sql -->
+
+                    <select type="text" class="form-control" name="city" id="city" cols="30" rows="3">
+                        <option class="county0" value="">請選擇區域</option>
+                        <?php foreach ($cities as $city) { ?>
+                            <option class="county<?= $city["county"] ?>" value="<?= $city["zipcode"] ?>"><?= $city["name"] ?></option>
+                        <?php } ?>
+                    </select>
+                    <!-- 選擇區域，連接city.sql -->
+
+
+                    <!-- 填寫之後的詳細地址 -->
+                    <input type="text" class="form-control" id="address_detail" name="address_detail" value="">
+                    <small id="addressHelp" class="form-text"></small>
+                </div>
+
+                <!-- <div class="form-group">
                     <label for="address">地址</label>
                     <textarea class="form-control" name="address" id="address" cols="30" rows="3"></textarea>
                     <small id="addressHelp" class="form-text"></small>
-                </div>
+                </div> -->
                 <button type="submit" class="btn btn-primary">送出</button>
             </form>
         </div>
@@ -64,7 +113,7 @@ $page_name = 'member_insert';
 
 <script>
     const email_re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
-    const mobile_re = /^09\d{2}-?\d{3}-?\d{3}$/;
+    // const mobile_re = /^09\d{2}-?\d{3}-?\d{3}$/;
 
     const $name = $('#name'),
         $mobile = $('#mobile'),
@@ -110,15 +159,31 @@ $page_name = 'member_insert';
             $.post('member_insert-api.php', $(document.form1).serialize(), function(data) {
                 console.log(data)
                 if (data.success) {
+                    console.log('test');
                     $('#info-bar').show().text('新增成功');
+                    // setTimeout(function() {
+                    //     location.href = 'imagemaker.php';
+                    // }, 1000);
                 } else {
-                    // $('#info-bar').show().text('新增失敗，請重新確認');
+                    $('#info-bar').show().text('新增失敗，請重新確認');
                 }
             }, 'json');
         }
 
         return false;
     }
+
+    $("#county").change(function() {
+        let county = $(this).val();
+        $("#city option:not(.county0)").hide();
+        $(".county" + county).show();
+    });
+
+    $("#city").change(function() {
+        let zipcode = $(this).val();
+        console.log(zipcode);
+        $("#zipcode").val(zipcode)
+    })
 </script>
 
 <?php include __DIR__ . '/parts/footer.php'; ?>
