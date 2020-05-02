@@ -16,14 +16,16 @@ $output = [
     'postData' => $_POST
 ];
 
+
+
 //if(isset($_POST['name']) and isset($_POST['mobile'])) {
 
-$sid = isset($_POST['sid']) ? intval($_POST['sid']) : 0;
+// $sid = isset($_POST['sid']) ? intval($_POST['sid']) : 0;
 // 如果沒有給 sid, 就回傳訊息然後結束
-if (empty($sid)) {
-    echo json_encode($output, JSON_UNESCAPED_UNICODE);
-    exit;
-}
+// if (empty($sid)) {
+//     echo json_encode($output, JSON_UNESCAPED_UNICODE);
+//     exit;
+// }
 // TODO: 欄位資料檢查
 
 // 檢查 Email 是否重複
@@ -38,12 +40,12 @@ if ($e_stmt->rowCount()) {
 }
 
 // 檢查手機號碼格式
-$mobile_re = "/^09\d{2}-?\d{3}-?\d{3}$/";
-if (empty(preg_grep($mobile_re, [$_POST['mobile']]))) {
-    $output['error'] = '手機號碼格式不符';
-    echo json_encode($output, JSON_UNESCAPED_UNICODE);
-    exit;
-}
+// $mobile_re = "/^09\d{2}-?\d{3}-?\d{3}$/";
+// if (empty(preg_grep($mobile_re, [$_POST['mobile']]))) {
+//     $output['error'] = '手機號碼格式不符';
+//     echo json_encode($output, JSON_UNESCAPED_UNICODE);
+//     exit;
+// }
 
 // $sql = "UPDATE `member_list` SET `member_num`=?,`name`=?,`email`=?,`gender`=?,`birthday`=?,`mobile`=?,`address`=? WHERE sid=?";
 $sql = "UPDATE `member_list` SET `name`=?,`email`=?,`gender`=?,`birthday`=?,`mobile`=?,`city`=?,`county`=?,`address_detail`=? WHERE sid=?";
