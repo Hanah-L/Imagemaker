@@ -34,7 +34,6 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
 ?>
 
 
-
 <!-- 暫用登入頁 -->
 <div class="container">
     <div id="info-bar" class="alert alert-info" role="alert" style="display: none">
@@ -56,28 +55,21 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
                 <!-- <input type="password" class="form-control" id="password" name="password" placeholder="請再次輸入密碼" required> -->
                 <!-- 再次輸入密碼的small先不下，因要抓取輸入密碼input的值，待與老師確認 -->
             </div>
-            <div>
-            <input type="checkbox" name="remember" id="" value="" checked="checked" autocomplete="off"> -->
-            <?php if($cookieEmail!=''):?>
-                <input type="checkbox" name="remember" id="" value="" checked="checked" autocomplete="off">
-            <?php else: ?>
-                <input type="checkbox" name="remember" id="" value="" autocomplete="off">
-            <?php endif; ?>
-            <!-- ?php }?>     -->
-            <label for="">記住我的帳號、密碼</label>
-            </div>
+            <input type="checkbox" name="remember" id="" value="" checked="checked" autocomplete="off">
+            <!-- 5/4記住我的帳號功能確認刪除，待終版確認是否移除 -->
             <div class="btnbox">
-                <button type="submit" class="btn-group btns btn--primary">登入/創建新帳號</button>
+                <button type="submit" class="btn-group btns btn--primary">登入</button>
+                <button type="submit" class="btn-group btns btn--primary">創建新帳號</button>
                 <!-- 4/28忘記密碼功能確認刪除，待終版確認是否移除 -->
-                <!-- <button class="btn-group btns btn--secondary">忘記密碼</button>
+                <!-- <button class="btn-group btns btn--secondary">忘記密碼</button>-->
         </form>
     </div>
 
     <?php include __DIR__ . '/parts/script.php'; ?>
 
     <script>
-        // const email_re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-        // const mobile_re = /^09\d{2}-?\d{3}-?\d{3}$/;
+        const email_re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        const mobile_re = /^09\d{2}-?\d{3}-?\d{3}$/;
 
         function checkForm() {
             // 記得api路徑要正確
@@ -102,33 +94,6 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
         }
 
         
-        // 記住我的帳號密碼
-        <?php
-        //讀取COOKIE的使用者名稱和密碼的值即可
-        if(isset($_COOKIE['email']) && $_COOKIE['email'] != '') {
-            echo $_COOKIE['email'];
-        }
-        if(isset($_COOKIE['password']) && $_COOKIE['password']!='') { 
-            echo $_COOKIE['password'];
-        }
-        
-        //登入，將使用者名稱和密碼存入到COOKIE
-        if($_POST['input'!='']){
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            //如果輸入的加密密碼和COOKIE中不一樣，那麼就加密
-            if($password != $cookiePassword) {
-                $password = sha1($password);
-            }
-            $remember = $_POST['remember'];
-            setcookie('email', $_POST['email'], time() + 1440);
-            setcookie('isRemembered', 1, time() + 1440);
-            // if($remember==1){
-            //     setcookie("email", $email, time() 3600*24*30);
-            //     setcookie("password", $password, time() 3600*24*30);
-            // }
-        }
-        ?>
 
     </script>
 
