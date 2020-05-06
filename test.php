@@ -17,7 +17,7 @@ $page_name = 'test';
     <link rel="stylesheet" href="css/baseAdd.css">
     <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="css/test.css">
-    
+
     <style>
         /* .qblock{
             padding: 10px 0;
@@ -32,38 +32,26 @@ $page_name = 'test';
 
 <body>
 
-    <section class="testquestion">
+    <section class="testquestion" id="DetailShow">
 
-        <div id="list">
+        <!-- <div class="bg"> -->
+        <!-- <div class="questionTilte d-flex align-items-center ">
+                <div class="Qtilte font-primary " id="Qindex"></div>
+                <div id="list"></div>
+            </div> -->
+        <!-- </div> -->
+        <!-- <div class="option" id="ansSelect">
 
-        </div>
-        <div class="bg">
-            <div class="questionTilte d-flex align-items-center ">
-                <div class="Qtilte font-primary ">Q1</div>
-                <div>
-                    <h3>今天你拿著時尚派對的邀請函，正要走入會場……</h3>
-                    <h4 id="questions">第一次來到這樣盛大陌生的聚會場合時，你的反應是：</h4>
-                </div>
-
-            </div>
-        </div>
-        <div class="option" id="ansSelect">
-            <div class="lable-btn" id="ans1">
-                <button type="button" class="clip-ld ansBtn"  data-target="2">主動搭話</button>
-            </div>
-            <div class="lable-btn" id="ans2">
-                <button type="button" class="clip-ld ansBtn" data-target="3">等待搭訕</button>
-            </div>
         </div>
         <div class="perfumeTest d-flex justify-content-between">
-            <div class="lable-btn ">
+            <div class="label-btn ">
                 <h4 class="clip-rd">你是哪種香調佳人？</h4>
             </div>
-            <div class="lable-btn ">
+            <div class="label-btn ">
                 <a class="clip-ld">重新測驗</a>
             </div>
 
-        </div>
+        </div> -->
     </section>
     <!-- <script
   src="https://code.jquery.com/jquery-3.5.0.min.js"
@@ -349,30 +337,10 @@ $page_name = 'test';
             },
         ]
 
-
+        var qCount = 1;
 
         console.log("count" + questions.length);
 
-        // questions.some(function(question){
-        //     // console.log(question)
-        //     let qBlock="";
-        //     let qContent="";
-        //     // console.log(question.q)
-        //     let qData=question.a;
-        //     qData.forEach(function(item){
-        //         // console.log(item)
-        //         qContent+=`<li data-target="${item.chooese}">${item.content}</li>`
-        //     })
-        //     // console.log(qContent);
-        //     qBlock=`
-        //     <div class="qblock">
-        //     <h3>${question.q}</h3>
-        //     <ul class="">${qContent}</ul>
-        //     </div>`
-
-        //     $("#list").append(qBlock);
-        //     return true
-        // })
         buildQuestionHtmlByIndex(0);
 
         function buildQuestionHtmlByIndex(index) {
@@ -382,73 +350,87 @@ $page_name = 'test';
                 let qContent = "";
                 let question = questions[index]
                 let qData = question.a;
-                qData.forEach(function(item) {
-                    qContent += `<li data-target="${item.chooese}">${item.content}</li>`
-                })
-                qBlock = `
+                let ansID = 1;
 
+                let qShow =
+                    `
                 <div class="bg">
-            <div class="questionTilte d-flex align-items-center ">
-                <div class="Qtilte font-primary ">Q1</div>
-                <div>
-                    <h3>今天你拿著時尚派對的邀請函，正要走入會場……</h3>
-                    <h4 id="questions">${question.q}</h4>
+                    <div class="questionTilte d-flex align-items-center ">
+                        <div class="Qtilte font-primary " id="Qindex"></div>
+                        <div id="list"></div>
+                    </div>
                 </div>
+                <div class="option" id="ansSelect">
 
-            </div>
-        </div>
-        <div class="option" id="ansSelect">
-            <div class="lable-btn" id="ans1">
-                <button type="button" class="clip-ld ansBtn"  data-target="">${qContent}</button>
-            </div>
-            <div class="lable-btn" id="ans2">
-                <button type="button" class="clip-ld ansBtn" data-target="">${qContent}</button>
-            </div>
-        </div>`
+                </div>
+                `
+                $("#DetailShow").empty().append(qShow);
 
-                
+                qData.forEach(function(item) {
+                    qContent += `<div class=label-btn id="ans${ansID}">
+                                    <button type="button" class="clip-ld ansBtn"  data-target="${item.chooese}">${item.content}</button>
+                                </div>`
+                    ansID++;
+                })
 
+                qBlock = `<div class="qblock">
+                            <h3>${question.q}</h3>
+                          </div>
+                         `
+
+                $("#Qindex").empty().append("Q" + qCount);
+                qCount++;
+                $("#ansSelect").empty().append(qContent);
                 $("#list").empty().append(qBlock);
 
-                $("#list .qblock li").click(function() {
-                    let target = $(this).data("target")
-                    // console.log("*************************************");
+                $("#ansSelect").on("click", ".ansBtn", function() {
+                    let target = $(this).data("target");
                     console.log(target)
                     buildQuestionHtmlByIndex(target);
                 })
             } else {
+                qCount = 1;
                 answer.some(function(ans) {
                     if (ans.t == index) {
-                        qBlock = `                    
-                        <section class="testanswer">
-                            <div class="bg">
+                        ansShow =
+                            `
+                        <div class="bg">
+                        </div>
+
+                        <div class="answerTilte">
+                            <h1 class="font-primary Qtilte">${ans.t}</h1>
+                            <div class="text">
+                                <h3>${ans.s}</h3>
+                                <h4>${ans.c}</h4>
                             </div>
-
-                            <div class="answerTilte">
-                                <h1 class="font-primary Qtilte">${ans.t}</h1>
-                                <div class="text">
-                                    <h3>${ans.s}</h3>
-                                    <h4>${ans.c}</h4>
-                                </div>
-                            </div>
-                            <div class="perfumeTest d-flex justify-content-between">
-                                <div class="lable-btn ">
-                                    <h4 class="clip-rd">你是哪種香調佳人？</h4>
-                                </div>
-                                <div class="lable-btn ">
-                                    <a class="clip-ld">重新測驗</a>
-                                </div>
-
-                            </div>
-
-                        </section>`
-
-                        $("#list").empty().append(qBlock);
+                        </div>   
+                        `
+                        $("#DetailShow").empty().append(ansShow);
                         return true
                     }
                 })
             }
 
+// 這裡的按鈕記得放連結
+// 重新測驗連結至testcover.php
+// 代表香水連結放已根據測驗結果篩選出的商品列表前兩個商品，連結product_list.php? 或是直接寫死各選項各抓2個固定分類商品
+            let endShow =
+                `
+            <div class="perfumeTest d-flex justify-content-between">
+                <div class="label-btn ">
+                     <h4 class="clip-rd">你是哪種香調佳人？</h4>
+                </div>
+                <div class="label-btn ">
+                    <a href="testcover.php" class="clip-ld">重新測驗</a>
+                </div>
+            </div>
+            <aside class="aside-recommend">
+                <div class="label-btn">
+                    <a class="clip-ld" href="">代表香水</a>
+                </div>
+            </aside>
+            `
+            $("#DetailShow").append(endShow);
 
         }
 
@@ -460,17 +442,17 @@ $page_name = 'test';
 
 
 
-        $("#ansSelect").on("click", ".ansBtn", function() {
-            let target = $(this).data("target")
-            // console.log(questions[target]);
-            $("#questions").text(questions[target].q);
-            $("#ans1").empty().append(`
-        <button type="button" class="clip-ld ansBtn"  data-target="${questions[target]["a"][0]["chooese"]}">${questions[target]["a"][0]["content"]}</button>
-        `);
-            $("#ans2").empty().append(`
-        <button type="button" class="clip-ld ansBtn"  data-target="${questions[target]["a"][1]["chooese"]}">${questions[target]["a"][1]["content"]}</button>
-        `);
-        })
+        // $("#ansSelect").on("click", ".ansBtn", function() {
+        //     let target = $(this).data("target")
+        //     // console.log(questions[target]);
+        //     $("#questions").text(questions[target].q);
+        //     $("#ans1").empty().append(`
+        // <button type="button" class="clip-ld ansBtn"  data-target="${questions[target]["a"][0]["chooese"]}">${questions[target]["a"][0]["content"]}</button>
+        // `);
+        //     $("#ans2").empty().append(`
+        // <button type="button" class="clip-ld ansBtn"  data-target="${questions[target]["a"][1]["chooese"]}">${questions[target]["a"][1]["content"]}</button>
+        // `);
+        // })
         // 如果最後choose結果不是數字，要給新的UI用URL做連結
         // 把html的內容當成字串寫進來
     </script>

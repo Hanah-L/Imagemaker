@@ -1,16 +1,16 @@
 /*==================================================news================================================ */
 .subtitle{
-    margin: 0;
+    margin: 5rem 1rem;
 }
-section.news .subtitle{
+/* section.news .subtitle{
     text-align: left;
-}
+} */
 
-.situation{
+.slide-back .situation{
     width: 22.5vw;
     height:10vw;
 }
-.situation .mask{
+.slide-back .situation .mask{
     position: absolute;
     width: 100%;
     height:100%;
@@ -19,7 +19,7 @@ background: #000;
 z-index: 1;
 
 }
-.situation img{
+.slide-back .situation img{
     object-fit: cover;
     width: 100%;
     height:100%;
@@ -35,16 +35,13 @@ section.news  .slide{
     height: 30vw;
     z-index: 1;
 }
-
-/* .news-preview{
-    height: 100vh; 
-} */
-
 section.news .slider-right .outsite{
     background: linear-gradient(180deg, #fff 50%);
     
 }
-
+.news-preview>.position-relative{
+    z-index: 1;
+}
 /* 若.news-preview .insite的height:100%會多出一點點，故現在用99% */
 .news-preview .insite{
     height: 99%;
@@ -73,13 +70,6 @@ section.news .slide-back{
     left:0;
 }
 
-.position-relative{
-    position: relative;
-}
-
-.position-absolute{
-    position: absolute;
-}
 
 @media all and (max-width: 768px) {
     .slide .news-preview{

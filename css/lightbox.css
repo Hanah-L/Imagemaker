@@ -5,15 +5,14 @@
                 <!-- 加一個假的底當感應區 -->
             </div>
             <div class="d-flex  position-relative align-items-center">
+                <!-- 叉叉icon --><i class="icon icon-cancel justify-content-end"></i>
                 <!-- 內容 -->
             </div>
         </section> 
         
         */
  /* 請記得掛==========================================
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script src="./js/main.js"></script> */
 
@@ -30,11 +29,12 @@ body.turnLight{
 }
 .Lightbox .fake{
     position: fixed;
-    background: #3a4035c2;
+    background: #3a4035;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    opacity: .9;
 }
 .Lightbox{
     display:block;
@@ -44,6 +44,17 @@ body.turnLight{
     top: 0;
     left: 0;
     z-index: 100;
+}
+.Lightbox .icon-cancel::before {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    opacity: .7;
+}
+.Lightbox .icon-cancel:hover::before{
+    opacity: 1;
 }
 @media all and (max-width: 768px){
     body.turnLight{

@@ -37,7 +37,44 @@
     margin-right: auto;
     margin-left: auto;
 }
+/*position
+-------------------------*/
 
+.position-relative{
+  position: relative;
+}
+
+.position-absolute{
+  position: absolute;
+}
+/* none-block
+-------------------------- */
+.desktop-none,
+.row.desktop-none {
+    display: none;
+}
+
+.mobile-none {
+    display: block;
+}
+
+.row.mobile-none {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .mobile-none,
+    .row.mobile-none {
+        display: none;
+    }
+    .desktop-none {
+        display: block;
+    }
+    .row.desktop-none {
+        display: flex;
+    }
+}
+/*-------------------------*/
 
 /* @media (min-width: 576px) {
     .container {

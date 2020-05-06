@@ -1,5 +1,3 @@
-i{    font-style: normal;
-}
 /*======================================== leading page ===============================================*/
 .leading_page{
     overflow: hidden;
@@ -64,16 +62,46 @@ i{    font-style: normal;
     }
 }
     /*======================================== Situation =============================================== */
-.indexTitle{
+    .bg-svg{
+        position: absolute;
+        z-index: -1;
+    }
+    .bg-svg.go{
+position: fixed;
+top: 0;
+left: 0;
+}
+
+    .indexTitle{
     height: 100px;
     width: 100px;
     position: absolute;
-    left: 10%;
+    left: 5%;
     top: 5%;
     font-weight: 600;
     font-size: 48px;
     line-height: 48px;
-    /* margin: 20px 10%; */
+    color: #3a4035;
+}
+.indexTitle.more{
+    cursor: pointer;
+}
+.indexTitle.more::after{
+    content: "more+";
+    font-size: 1rem;
+    position: absolute;
+    left: calc(5% + 75px);
+    top: 5%;
+    transform: rotate(90deg);
+    color: #bf2944;
+    font-weight: 300;
+    opacity: .7;
+}
+.indexTitle.more:hover::after{
+    opacity: 1;
+}
+a.indexTitle:hover{
+    color: #3a4035;
 }
 .situationTitle{
     font-weight: 600;
@@ -158,8 +186,8 @@ i{    font-style: normal;
 .about .logoPicture{
     position: absolute;
     width:20%;
-    left:50px;
-    top:-3px;
+    left:0;
+    top:10px;
 }
 .section_left,.section_right{
     width:50%;
@@ -167,7 +195,7 @@ i{    font-style: normal;
 .section_all{
     padding-top:20% ;
 }
-.contact{
+form.contact{
     border-radius: 4px;
     padding:10px;
     margin-left: 30%;
@@ -190,18 +218,21 @@ font-weight: 400;
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 0;
 }
 .contact_bg li{
     padding: 15px 0;
     font-size: 0.83em;
+    z-index: 1;
+    position: relative;
+
 }
 .contact_bg input,.contact_bg textarea{
     width: 100%;
 }
 
-.contact .btn{
-    bottom:0;
-    left:75%;
+form.contact .btn{
+   
     width: 74px;
     padding: 0;
     text-align: center;
@@ -219,11 +250,12 @@ font-weight: 400;
     padding: 0 16px;
 }
 .about .logoPicture{
-    position: absolute;
     width:30%;
-    left:50px;
-    top:5px;
+    left:5px;
 }
-.contact{margin-left: 0%;
+form.contact{margin-left: 0%;
+}
+.about .mask{
+    height: auto;
 }
 }

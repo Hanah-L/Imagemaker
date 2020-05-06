@@ -35,12 +35,12 @@ $cities = $stmtCity->fetchAll();
 </style>
 
 <?php
-$cookieEmail = '';
-if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
-    if($_COOKIE['isRemembered'] == 1){
-        $cookieEmail = $_COOKIE['email'];
-    }
-}
+// $cookieEmail = '';
+// if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
+//     if($_COOKIE['isRemembered'] == 1){
+//         $cookieEmail = $_COOKIE['email'];
+//     }
+// }
 ?>
 
 <div class="container">

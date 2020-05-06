@@ -54,8 +54,9 @@ if (isset($_POST['name']) and isset($_POST['email'])) {
     //     exit;
     // }
 
-    $sql = "INSERT INTO `member_list`(`name`,`email`,`gender`,`birthday`,`mobile`,`city`,`county`,`address_detail`) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    
+
+    $sql = "UPDATE `member_list` SET `name`=?,`gender`=?,`birthday`=?,`mobile`=?,`county`=?,`city`=?,`address_detail`=?,`password`=? WHERE 1";
 
     $stmt = $pdo->prepare($sql);
 
@@ -66,11 +67,7 @@ if (isset($_POST['name']) and isset($_POST['email'])) {
         $output['success'] = true;
         $output['error'] = '';
 
-       
-        setcookie('email', $_POST['email'], time() + 1440);
-        setcookie('isRemembered', 1, time() + 1440);
-
-        
+               
     } else {
         $output['error'] = '資料無法新增，請再確認一下喔';
     }    
