@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/SVG/ImageMaker_logo.svg" />
+    <title>Image Maker</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/baseAdd.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/test.css">
+</head>
+
+<body>
+    <section class="testanswer">
+        <div class="bg">
+        </div>
+
+        <div class="answerTilte">
+            <h1 class="font-primary Qtilte">花香調佳人</h1>
+            <div class="text">
+                <h3>質感不敗．引領流行．散發自信．引人注目</h3>
+                <h4>
+                    你與人相處時有許多面向，有時嬌媚得像是嬌嫩欲滴的鮮花，可愛得想讓人把你收到口袋裡好好呵護；有時又能散發出最完美的自信，帶領潮流讓大家都想模仿你。因為喜歡沉浸在自己的主觀世界中，你很了解自己的感覺，透過做到自己喜歡的事情而得到成就感，對於外界的批評不會有太大的情緒反應。<BR>
+
+                    你非常容易吸引別人注意，因為做自己的態度總讓人覺得你過得很有自己的價值，而自身的價值是遠超過於任何形式的物質價值。通常基本經典的款式非常適合你，但因為你與生俱來的藝術天賦，會讓你在巧妙的搭配後撞擊出更令人驚豔的火花，對你來說，活得有質感是一輩子要去追求的事。
+                </h4>
+            </div>
+        </div>
+        <div class="perfumeTest d-flex justify-content-between">
+            <div class="label-btn ">
+                <h4 class="clip-rd">你是哪種香調佳人？</h4>
+            </div>
+            <div class="label-btn ">
+                <a class="clip-ld">重新測驗</a>
+            </div>
+
+        </div>
+
+    </section>
+    <aside class="aside-recommend">
+        <div class="label-btn">
+            <a class="clip-ld" href="">代表香水</a>
+        </div>
+    </aside>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script>
+    var Tilteheight = $('.answerTilte').height()
+    console.log(Tilteheight);
+    $(window).resize(function () {
+
+        if ($(window).width() < 768) {
+            $('.testanswer').find('.bg').css('height', Tilteheight)
+        } else {
+            $('.testanswer').find('.bg').css('height', '100vh')
+        }
+    }
+    )
+</script>
+
+</html>

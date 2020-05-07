@@ -9,12 +9,12 @@
     <title>Image Maker</title>
     <!-- CSS link -->
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/baseAdd.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="./css/share.css">
-    <link rel="stylesheet" href="css/signin.css">
 
 </head>
 <!-- PHP end---------------------------------------------------------------------------------------------------------------------------------------------->
@@ -40,19 +40,16 @@
             </ul>
             <ul class="icon-group--center row mobile-none position-relative">
                 <!-- 未登入 -->
-                <li class="icon-btn"><i class="icon icon-user-o"></i></li>
+                <li> <a href="login.php" title="登入與註冊" class="icon-btn"><i class="icon icon-user-o"></i></a></li>
                 <!-- end -->
                 <!-- 已登入 -->
-                <li class=""><a href="member" title="會員資訊" class="icon-btn"><i class="icon icon-user"></i></a>
+                <li class=""><a href="member" title="會員資訊" class="icon-btn haverlogin"><i
+                            class="icon icon-user"></i></a>
                 </li>
                 <!-- end -->
                 <li><a href="cart.html" title="購物車" class="icon-btn"><i class="icon icon-basket"></i></a></li>
-                <li class="login-addmenu  position-absolute">
-                    <a class="tologin">登入</a>
-                    <a class="tosignin">註冊</a>
-                </li>
                 <li class="member-addmenu  position-absolute">
-                    <a href="member.php">會員資訊</a>
+                    <a href="member">會員資訊</a>
                     <a href="logout.php">登出</a>
                 </li>
             </ul>
@@ -72,25 +69,21 @@
             <ul class="popup-nav row flex-column ">
                 <div class="d-flex justify-content-center align-items-center ">
                     <!-- 未登入 -->
-                    <li class="popup-icon"><i class="icon icon-user-o"></i></li>
+                    <li> <a href="login.php" title="登入與註冊" class="icon-btn"><i class="icon icon-user-o"></i></a></li>
                     <!-- end -->
                     <!-- 已登入 -->
-                    <li class="popup-icon"><i class="icon icon-user"></i>
+                    <li class="haverlogin popup-icon"><i class="icon icon-user"></i>
                     </li>
                     <!-- end -->
                     <li class="popup-icon"><a href="cart.html" title="購物車" class="icon-btn"><i
                                 class="icon icon-basket"></i></a></li>
-                </div>
-                <div class="login-addmenu ">
-                    <a class="popup-menu__item tologin">登入</a>
-                    <a class="popup-menu__item tosignin">註冊</a>
                 </div>
                 <div class="member-addmenu">
                     <a class="popup-menu__item" href="member">會員資訊</a>
                     <a class="popup-menu__item" href="logout.php">登出</a>
                 </div>
                 <li><a href="shop.html" class="popup-menu__item">商店專區</a></li>
-                <li><a href="news.html" class="popup-menu__item">染香分享</a></li>
+                <li><a href="news.html" class="popup-menu__item">最新消息</a></li>
                 <li><a href="test.html" class="popup-menu__item">選香測試</a></li>
                 <li><a href="knowledge.html" class="popup-menu__item">香水知識</a></li>
                 <li><a href="QnA.html" class="popup-menu__item">Q & A</a></li>
@@ -195,7 +188,7 @@
                                 <div class="text">
                                     <h2 class="situationTitle font-black">送禮指引</h2>
                                 </div>
-                                <img class="image" src="images/pexels-photo-360624.jpeg" alt="">
+                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
@@ -694,7 +687,7 @@
         </div>
     </section>
     <!-- End About -->
-    <!--  -->
+
 
     <!-- TOPHP=>footer ----------------------------------------------------------------------------------------------------------------------------->
     <!-- ToTop -->
@@ -741,7 +734,7 @@
             <ul class="popup-nav row justify-content-around">
                 <div class="d-flex justify-content-around">
                     <li class="nav"><a href="shop.html" class="popup-footer__item">商店專區</a></li>
-                    <li class="nav"><a href="news.html" class="popup-footer__item">染香分享</a></li>
+                    <li class="nav"><a href="news.html" class="popup-footer__item">最新消息</a></li>
                     <li class="nav"><a href="test.html" class="popup-footer__item">選香測試</a></li>
                 </div>
                 <div class="d-flex justify-content-around">
@@ -761,10 +754,8 @@
         </div>
         <!-- End 手機隱藏footer -->
     </footer>
+
     <!-- End Footer -->
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

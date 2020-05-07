@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/SVG/ImageMaker_logo.svg" />
+    <title>Image Maker</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel="stylesheet" href="css/member-info.css">
+
+</head>
+
+<body>
+    <section class="member-icon icon-group--center ">
+        <ul>
+            <li class="circle"> <a href="member-info.html" class="icon-btn"><i class="icon icon-user"></i></a></li>
+            <li class="circle"> <a href="member-love.html" class="icon-btn"><i class="icon icon-heart"></i></a></li>
+            <li class="circle"> <a href="member-order.html" class="icon-btn"><i class="icon icon-th-list"></i></a>
+            </li>
+            <li class="circle"> <a href="member-share.html" class="icon-btn"><i class="icon icon-reply"></i></a>
+            </li>
+        </ul>
+    </section>
+    <div class="member bg-color-grey">
+
+
+        <!-- Start Section -->
+        <!-- TODO有空可以寫icon浮入的動畫 -->
+        <section class="member-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-12">
+                        <h1 class="subtitle">會員資訊</h1>
+                        <form name="form1" method="post" onsubmit="return checkForm()" novalidate>
+                            <ul>
+                                <li class="form-group">
+                                    <label class="label" for="name">*姓名:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                    <small id="nameHelp" class="form-text"></small>
+                                </li>
+                                <li class="form-group">
+                                    <!-- email的檢查條件在下面count email_re -->
+                                    <label class="label" for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" readonly disabled
+                                        value="<?= $cookieEmail ?>">
+                                    <small id="emailHelp" class="form-text"></small>
+                                </li>
+                                <li class="form-group">
+                                    <label class="label" for="gender">性別:</label>
+                                    <select type="gender" class="other-width" id="gender" name="gender">
+                                        <!-- <option value="">－</option> -->
+                                        <option value="other">其他</option>
+                                        <option value="male">男</option>
+                                        <option value="female">女</option>
+                                        <small id="genderHelp" class="form-text"></small>
+                                    </select>
+                                </li>
+                                <li class="form-group">
+                                    <label class="label" for="birthday">生日:</label>
+                                    <input type="date" class="other-width" id="birthday" name="birthday">
+                                    <small id="birthdayHelp" class="form-text"></small>
+
+                                    <!-- width沒變 -->
+                                </li>
+                                <li class="form-group">
+                                    <label class="label" for="mobile">手機:</label>
+                                    <input type="text" class="" id="mobile" name="mobile"
+                                        pattern="09\d{2}-?\d{3}-?\d{3}">
+                                    <small id="mobileHelp" class="form-text"></small>
+                                </li>
+                                <li class="form-group address">
+                                    <label class="label" for="address">地址:</label>
+                                    <!-- <textarea class="form-control" name="address" id="address" cols="30" rows="3">?= htmlentities($row['address']) ?></textarea> -->
+                                    <input type="text" name="zipcode" id="zipcode" value="" size="1" readonly disabled>
+
+                                    <select type="text" class="other-width" name="county" id="county" cols="30"
+                                        rows="3">
+                                        <option value="">請選擇縣市</option>
+                                        <?php foreach ($counties as $county) { ?>
+                                        <option value="<?= $county["sn"] ?>"><?= $county["name"] ?></option>
+                                        <?php } ?>
+                                    </select>
+                                    <!-- 選擇縣市，連接county.sql -->
+
+                                    <select type="text" class="other-width" name="city" id="city" cols="30" rows="3">
+                                        <option class="county0" value="">請選擇區域</option>
+                                        <?php foreach ($cities as $city) { ?>
+                                        <option class="county<?= $city["county"] ?>" value="<?= $city["zipcode"] ?>">
+                                            <?= $city["name"] ?></option>
+                                        <?php } ?>
+                                    </select>
+                                    <!-- 選擇區域，連接city.sql -->
+
+
+                                </li>
+                                <li class="form-group">
+                                    <!-- 填寫之後的詳細地址 -->
+                                    <input type="text" class="form-control" id="address_detail" name="address_detail"
+                                        value="">
+                                    <small id="addressHelp" class="form-text"></small>
+                                </li>
+                                <li class="form-group justify-content-end">
+                                    <button class="btn btn--primary" type="submit">儲存資料</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="col-6 col-md-12">
+                        <h1 class="subtitle">修改密碼</h1>
+                        <form class="form" action="">
+                            <ul>
+                                <li class="form-group">
+                                    <label class="" for="name">舊密碼:</label>
+                                    <input class="input" type="password" name="" id="">
+                                </li>
+                                <li class="form-group">
+                                    <label class="" for="name">新密碼:</label>
+                                    <input class="input" type="password" name="" id="">
+                                </li>
+                                <li class="form-group">
+                                    <label class="" for="name">確認密碼:</label>
+                                    <input class="input" type="password" name="" id="">
+                                </li>
+                                <li class="form-group justify-content-end">
+                                    <button class="btn btn--primary" type="submit">確認修改</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- End Section -->
+
+        <!-- Start Section -->
+        <section class="record-test bg-color-white">
+
+            <div class="d-flex justify-content-between">
+                <div class="box-group  position-relative d-flex  align-items-center">
+                    <h1 class="subtitle position-absolute">測驗紀錄</h1>
+                    <a class="a-btn position-relative" href="#">
+                        <div class="box d-flex justify-content-between">
+                            <h3 class="title font-primary">你是哪種香調佳人？</h3>
+                            <h5 class="content font-black">果香調佳人</h5>
+                            <h6 class="date font-black">2020/05/15</h6>
+                        </div>
+                    </a>
+                    <a class="a-btn position-relative" href="#">
+                        <div class="box d-flex justify-content-between">
+                            <h3 class="title font-primary">你是哪種香調佳人？</h3>
+                            <h5 class="content font-black">綠葉調佳人</h5>
+                            <h6 class="date font-black">2020/04/01</h6>
+                        </div>
+                    </a>
+                    <a class="a-btn position-relative" href="#">
+                        <div class="box d-flex justify-content-between">
+                            <h3 class="title font-primary">找測出最適合你的香水</h3>
+                            <h5 class="content font-black">木質香調</h5>
+                            <h6 class="date font-black">2020/03/29</h6>
+                        </div>
+                    </a>
+                    <a class="a-btn position-relative" href="#">
+                        <div class="box d-flex justify-content-between">
+                            <h3 class="title font-primary">找測出最適合你的香水</h3>
+                            <h5 class="content font-black">花香調</h5>
+                            <h6 class="date font-black">2020/02/04</h6>
+                        </div>
+                    </a>
+                </div>
+                <!-- TODO有空可以寫hover由左右的箭頭動畫 -->
+                <div class=" boxClip bg-color-primary mobile-none">
+                    <a href="test.html" class="testTitle font-white">看看新測試
+                        <i class="icon icon-right-open"></i></a>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Section -->
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
