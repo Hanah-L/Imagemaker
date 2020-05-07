@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/lightbox.css">
-
+    <link rel="stylesheet" href="css/signin.css">
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/share.css">
 </head>

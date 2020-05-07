@@ -17,6 +17,7 @@
             <a href=""><img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
         </div>
         <div class="logofont">
+            <!-- hanah  這加了position-relative-->
             <span class="position-relative">Image Maker</span>
         </div>
         <div class="leading_pageBox box-right d-flex justify-content-around">
@@ -30,6 +31,8 @@
             <a href=""><img src="images/01._Tender_bottle_1800x1800.png" alt=""></a>
         </div>
     </section>
+    <!-- End leading page -->
+
     <div class="bg-svg">
         <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="100vh" viewBox="100 100 1920 1080">
             <g id="Group_3" data-name="Group 3">
@@ -54,35 +57,35 @@
                         <div class="col-2-5 d-flex">
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">不踩雷，送禮看這邊!</h2>
                                 </div>
                                 <a href="#"><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">哥的魅力，這樣來的!</h2>
                                 </div>
-                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                                <a href=""><img class="image" src="images/pexels-photo-927022.jpeg" alt=""></a>
                             </div>
                         </div>
                         <div class="col-3-5 d-flex">
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">費洛蒙製造機，約會必敗款!</h2>
                                 </div>
-                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                                <a href=""><img class="image" src="images/pexels-photo-3365555.jpeg" alt=""></a>
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">帶著它，整個城市都是你的伸展台!</h2>
                                 </div>
-                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                                <a href=""><img class="image" src="images/pexels-photo-995470.jpeg" alt=""></a>
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">週末狂歡基本配備!</h2>
                                 </div>
-                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                                <a href=""><img class="image" src="images/pexels-photo-3171815.jpeg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -90,35 +93,35 @@
                         <div class="col-2-5 d-flex">
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">來點香氛舒緩身心!</h2>
                                 </div>
-                                <img class="image" src="images/pexels-photo-360624.jpeg" alt="">
+                                <img class="image" src="images/pexels-photo-3757942.jpeg" alt="">
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">展現專業，增添自信!</h2>
                                 </div>
-                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                                <a href=""><img class="image" src="images/pexels-photo-3861958.jpeg" alt=""></a>
                             </div>
                         </div>
                         <div class="col-3-5 d-flex">
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">性別框架，OUT!</h2>
                                 </div>
-                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                                <a href=""><img class="image" src="images/pexels-photo-2027059.jpeg" alt=""></a>
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">大人小孩都喜歡!</h2>
                                 </div>
-                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                                <a href=""><img class="image" src="images/pexels-photo-1679825.jpeg" alt=""></a>
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">送禮指引</h2>
+                                    <h2 class="situationTitle font-black">清新優雅就是你的專屬代名詞!</h2>
                                 </div>
-                                <a href=""><img class="image" src="images/pexels-photo-360624.jpeg" alt=""></a>
+                                <a href=""><img class="image" src="images/selective-focus-photo-of-woman-in-a-striped-dress-sitting-on-3760271.jpeg" alt=""></a>
                             </div>
                         </div>
                     </div>

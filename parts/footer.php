@@ -27,7 +27,7 @@
             <ul class="popup-nav row justify-content-around">
                 <div class="d-flex justify-content-around">
                     <li class="nav"><a href="shop.html" class="popup-footer__item">商店專區</a></li>
-                    <li class="nav"><a href="news.html" class="popup-footer__item">最新消息</a></li>
+                    <li class="nav"><a href="news.html" class="popup-footer__item">染香分享</a></li>
                     <li class="nav"><a href="test.html" class="popup-footer__item">選香測試</a></li>
                 </div>
                 <div class="d-flex justify-content-around">
@@ -47,5 +47,4 @@
         </div>
         <!-- End 手機隱藏footer -->
     </footer>
-
     <!-- End Footer -->
