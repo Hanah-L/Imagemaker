@@ -1,0 +1,251 @@
+section.test .bg{
+    background:linear-gradient(180deg, rgba(58, 64, 53, 0.6) 0%, rgba(58, 64, 53, 0.6) 100%), url(../images/woman-blowing-glitters-3419699.jpg) center center;
+    background-size: cover;
+    height: 100vh;
+}
+.testTitle{
+    padding: 20vw 20%;
+}
+.testTitle .icongo{
+    right: 30%;
+    bottom: 25%;
+    position: absolute;
+    
+}
+.testTitle .icongo::after{
+    content: "Start";
+    position: relative;
+    left: 20px;
+    font-size: 100px;
+    color: #fff;
+    opacity: .5;
+}
+.testTitle .icon-right-open::before{
+    font-size: 100px;
+    opacity: .5;
+    width: 50px;
+}
+.testTitle .icongo:hover::after,.testTitle .icongo:hover .icon-right-open::before{
+    opacity: 1;
+    transition:all .5s;
+
+}
+
+@media all and (max-width:768px){
+    .testTitle{
+        height: 100%;
+        padding:20%
+    }
+    .testTitle .icongo{
+        right: 0;
+        padding:10vw 15%;
+    }
+}
+/* ======================testquestion================================================================================================ */
+.testquestion .bg{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%), url(../images/pexels-photo-3171815.jpeg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 80vw;
+    height: 100vh;
+    padding: 10% 0;
+}
+.questionTilte{
+    width:80%;
+    height: 100%;
+    background: rgba(255,255,255,.7);
+    padding-left:15em ;
+    flex-wrap: wrap;
+}
+.Qtilte{
+    opacity: .6;
+    font-size: 18em;
+    font-weight: 600;
+    mix-blend-mode: multiply;
+    position: absolute;
+   
+}
+.questionTilte .Qtilte{
+    top:-2%;
+    left: 0;
+}
+.questionTilte .Qtilte+div{
+    width:80%;
+}
+.questionTilte h2{
+font-weight: 900;
+}
+.option{
+    position: absolute;
+    right:0;
+    top:40%;
+}
+.option .label-btn{
+     margin: 2rem 0;
+    height: 40px;
+}
+.option .clip-ld{
+   width: 100%;
+   padding-right:15rem;
+   height: 50px;
+   background: #BF2944;
+    color: #fff;
+    border: none;
+}
+
+
+.perfumeTest{
+position: absolute;
+width: 100%;
+bottom: 10%;
+left: 0;
+}
+
+.perfumeTest .clip-rd{
+    background:rgba(255,255,255,.7);
+    color:#000;
+}
+.perfumeTest .clip-ld{
+    background:rgba(0,0,0,.3);
+    color:#fff;
+}
+.perfumeTest .clip-rd.label-btn:hover {
+    box-shadow: 2px 3px 3px #00000048;
+    transform:none;
+}
+@media all and (max-width:768px){
+    .testquestion .bg{
+       background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.5) 100%), url(../images/pexels-photo-3171815.jpeg);
+       width: 100%;
+        padding:7rem 0;
+    }
+    .questionTilte{
+        width:100%;
+        height: 60%;
+        padding:3rem;
+        flex-direction: column;
+    }
+    .Qtilte{
+      opacity: .8;
+        font-size: 10em;
+        font-weight: 900;
+    }
+    .questionTilte .Qtilte{
+        top: 0;
+    }
+    .questionTilte .Qtilte+div{
+        margin: auto 0;
+        width:100%;
+    }
+    .option{
+        top:70%;
+    }
+    .option .label-btn{
+         margin: 2rem 0;
+        height: 40px;
+    }
+    .option .clip-ld{
+       width: 100%;
+       padding-right:10rem;
+       height: 50px;
+       background: #BF2944;
+        color: #fff;
+        border: none;
+    }
+    
+.perfumeTest{
+    height: 30px;
+    top: 0;
+    left: 0;
+    }
+}
+/* ======================testanswer================================================================================================ */
+.testanswer .bg{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%), url(../images/pexels-photo-3171815.jpeg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 80vw;
+    height: 100vh;
+    top:60px;
+}
+.answerTilte{
+    width:70%;
+    height: auto;
+    background: rgba(255,255,255,.7);
+    position: absolute;
+    top:30%;
+}
+.answerTilte .Qtilte{
+    width: 40%;
+    top:-25%;
+    left: 0;
+    font-size: 10em;
+    line-height: 10rem;
+}
+.answerTilte .text{
+    line-height: 2rem;
+    padding: 3rem;
+    padding-top: 6rem;
+    padding-left: 30%;
+    width: 100%;
+}
+.answerTilte .text h3{
+    font-weight: bold;
+}
+.aside-recommend{
+    position: absolute;
+    right: 0;
+    top: 2rem;
+}
+.aside-recommend .clip-ld {
+    padding-right: 15rem;
+    font-size: 1.5rem;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    background: #BF2944;
+        color: #fff;
+    }
+    .aside-recommend .clip-ld::after{
+    content: "more+";
+    padding-left: 1rem;
+    font-weight: 100;
+    font-size: 1rem;
+    opacity: .7;
+    }
+    .aside-recommend .label-btn:hover .clip-ld::after{
+        opacity: 1;
+    }
+    @media all and (max-width:768px){
+        .testanswer .bg{
+            width: 100%;
+        }
+        .answerTilte{
+width: 100%;
+top: 0;
+left: 0;
+        }
+        .answerTilte .Qtilte{
+width: 100%;
+    font-size: 3.5rem;
+    position: relative;
+    padding-left: 2rem;
+        }
+       
+        .answerTilte .text{
+                padding: 3rem;
+            }
+         .answerTilte .text{
+                padding-top: 0;
+                padding-bottom: 2rem;
+            }
+             .aside-recommend{
+            position: relative;
+            top: -1rem;
+        }
+            .aside-recommend .clip-ld{
+                padding-right: 10rem;
+                position: absolute;
+                right: 0;
+            }
+    }

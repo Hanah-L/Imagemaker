@@ -1,0 +1,110 @@
+/*我想問 
+============================================================== */
+ .ask-form{
+    position: fixed;
+    width: 85%;
+    max-width: 800px;
+    left: -100px;
+    /* 用js抓實際width回傳left */
+    top: 5rem;
+    background: rgba(58, 64, 53, 0.95);
+    border-radius: 0 0 2px 0;
+    z-index: 999;
+    transition: .5s;
+}
+.ask-icon{
+position: absolute;
+right:-47.2px;
+border-radius:0 5px 5px 0;
+background:#BF2944;
+writing-mode: vertical-rl;
+text-align: center;
+letter-spacing: 4px;
+padding: .5rem;
+padding-left: 1rem;
+cursor: pointer;
+box-shadow: 4px 4px 20px rgba(0, 0, 0, .25);
+transition: .5s;
+}
+.ask-icon:hover{
+right:-63.2px;
+padding-left: 2rem;
+}
+.ask-icon>h4{color: #f9f9f9;}
+.ask-form textarea{
+resize: none;
+width:100%;
+}
+.ask-form .btn{
+    margin: 0;
+}
+.QA-contact{
+padding: 2rem;
+padding-left:30% ;
+}
+/* ========================================================================== */
+.QA{
+    padding: 4rem 0;
+}
+.QA.container{
+    max-width:1000px ;
+    width: 70%;
+}
+.QA .subtitle{
+    margin: 20px 0;
+}
+.QA .list>li>.d-flex{
+cursor: pointer;
+}
+.QA .title{
+    color:#BF2944;
+    font-weight: 500;
+}
+.QA .question{
+    flex: 1 1 0;
+}
+.QA .answer{
+    padding:0 3rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.QA .list-item.open .answer{
+    max-height: 100vh;
+}
+/*================================= +-icon ========================================= */
+.plus-icon{
+    width: 20px;
+    margin: 0 2rem;
+    /* padding-top: 5px; */
+}
+.dash,.plus{
+height: 3px;
+width: 100%;
+background: #3a4035;
+}
+.plus{
+    transform: rotate(90deg)translateX(-3px);
+    transition: all .5s;
+}
+/* .plus-icon.bedash .plus{
+    transform: rotate(0)translateY(-3px);
+} */
+.QA .list-item.open .plus{
+    transform: rotate(0)translateY(-3px);}
+/* ==================================================================================== */
+@media(max-width: 768px){
+    .QA{
+        padding: 4rem 0 4rem 2rem;
+    }
+    .ask-icon:hover{
+        right:-47.2px;
+        padding-left: 1rem;
+        }
+    .plus-icon{
+        margin: 0;
+    }
+    .QA-contact{
+        padding-left:2rem;
+        }
+}

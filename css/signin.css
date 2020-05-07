@@ -1,0 +1,88 @@
+.login-signin .title h2{
+    margin: 0 .5rem;
+}
+.login-signin .title h2.change{
+    color:lightgray;
+    cursor: pointer;
+}
+.login-signin .icon-cancel::before {
+    color: #3a4035;
+}
+.Lightbox.login-signin .fake,.Lightbox.term .fake{
+    background: #f9f9f9;
+}
+.Lightbox.login-signin>.position-relative{
+    margin: 10rem auto;
+    padding:3rem 5rem;
+    width: 95%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, .25);
+}
+
+
+.login-signin input[type="checkbox"],.term input[type="checkbox"]{
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+}
+.login-signin label,.term label{
+    cursor: pointer;
+}
+.login-signin form{width: 100%;}
+.login-signin .signin.none,.login-signin .goin.none,.signin-form.none,.login-form.none{
+    display: none;
+}
+
+.login-signin .btn {
+    width: 128px;
+    padding: 0;
+    margin: 0 ;
+}
+@media all and (max-width:768px){
+    .Lightbox.login-signin>.d-flex{
+        padding: 2rem;
+        height: 70vh;
+    }
+}
+
+
+
+/* term
+---------------------------*/
+.toterm span:hover{
+text-decoration:underline;
+}
+.Lightbox.term>.d-flex{
+    margin: 10rem auto;
+    padding: 2rem;
+    width: 95%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, .25);
+}
+
+.term .text{
+    width: 100%;
+    /* height: 200px;  */
+    overflow: auto;
+    letter-spacing: 2px;
+    line-height: 32px;
+    background-color: #f9f9f9;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .25);
+}
+.term .btn{
+    width: 50%;
+}
+@media(max-width:768px) {
+    .Lightbox.term>.d-flex{
+    margin: 4rem auto;
+
+    }
+    .term .text{
+    line-height: 25px;
+
+    }
+}

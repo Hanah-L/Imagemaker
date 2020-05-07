@@ -88,7 +88,7 @@
     width: 100vw;
     height: 60px;
     position: fixed;
-    z-index: 99999;
+    z-index: 99;
     transition: all .5s;
 }
 .header.scroll{
@@ -125,6 +125,7 @@
 
 .navbar .icon {
     font-size: 25px;
+    cursor: pointer;
 }
 
 .nav {
@@ -136,6 +137,9 @@
     transition: .3s;
 }
 .header .icon-user-o{
+    color: #f9f9f9;
+}
+.header .icon-user {
     color: #f9f9f9;
 }
 @media (max-width: 768px) {
@@ -156,22 +160,25 @@
 }
 
 
-/* member-addmenu
+/* member-addmenu,login-addmenu
 -------------------------- */
-.member-addmenu.hover{
+.member-addmenu.hover,.login-addmenu.hover{
     opacity: 1;
     max-height: 100vh;
+    transition: all .5s;
 }
-.member-addmenu{
+.member-addmenu,.login-addmenu{
     width: 80px;
     max-height: 0;
     background-color: #3A4035d2;
     overflow: hidden;
     opacity: 0;
-    transition: all .5s;
+    transition: all .5s .6s;
     left: 0;
     top: 42.5px;
+    cursor: pointer;
 }
+.member-addmenu a,.login-addmenu a{display: block;}
 /* popup-menu
 ---------------------------*/
 
@@ -204,28 +211,31 @@
         height: 40px;
         text-align: center;
     }
-    .popup-nav .haverlogin.popup-icon{
+    /* .popup-nav .haverlogin.popup-icon{
         color: #fff;
         font-size: 25px;
        
-    }
+    } */
     .popup-nav .popup-icon .icon::before{
         line-height: 40px;
         font-size: 30px;
     }
-    .popup-nav.hover .haverlogin.popup-icon{
+    .popup-nav.hover .icon-user, .popup-nav.o-hover .icon-user-o{
         color: #3A4035;
+    }
+    .popup-nav.hover .popup-icon:nth-child(2),
+    .popup-nav.o-hover .popup-icon:nth-child(1){
         background: #f9f9f9;
         border-radius: 2px 2px 0 0;
     } 
-    .popup-menu .member-addmenu .popup-menu__item{
+    .popup-menu .member-addmenu .popup-menu__item,.popup-menu .login-addmenu .popup-menu__item{
         color: #3A4035;
     }
-    .popup-nav.hover .member-addmenu{
+    .popup-nav.hover .member-addmenu,.popup-nav.o-hover .login-addmenu{
  opacity: 1;
   max-height: 100vh;
   }
-    .popup-nav .member-addmenu{
+    .popup-nav .member-addmenu,.popup-nav .login-addmenu{
         opacity: 0;
         width: 100%;
         max-height: 0;
@@ -245,9 +255,6 @@
     transition: all 0.3s;
 }
 
-.popup-menu__item:hover {
-    color: #bf2944;
-}
 
 
 /* menu-bar
@@ -384,7 +391,7 @@
 .totop{
     position: fixed;
     display: none;
-    z-index: 99999;
+    z-index: 99;
     right: 2rem;
     bottom: 2rem;
     filter: drop-shadow(2px 3px 3px #00000048);
@@ -398,8 +405,12 @@
 .logo-svg path{
     fill: #BF2944;
 }
-.logo-svg .logo-header{
-    transform: translateY(1px);
+.totop.move .logo-header{
+    transform: translateY(9px);
+}
+.totop.move h2{
+    transform: scale(.5);
+    transition: 1s ;
 }
 .totop .position-absolute{
     top: 20px;

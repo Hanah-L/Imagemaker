@@ -66,6 +66,10 @@
         position: absolute;
         z-index: -1;
     }
+    .bg-svg svg{
+        width: 100vw;
+        height:100vh;
+    }
     .bg-svg.go{
 position: fixed;
 top: 0;

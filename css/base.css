@@ -245,11 +245,21 @@ textarea {
     /* 1 */
     line-height: 1.15;
     /* 1 */
-    margin: 0;
+    margin: .5em 0;
     /* 2 */
 }
 
-
+/* input
+---------------------------------------------------------------------------------- */
+input,select {
+    width: 100%;
+    height: 1.7rem;
+    padding: 3px;
+    border-radius: 2px;
+    vertical-align: middle;
+    border: 1px rgb(199, 199, 199) solid;
+}
+/*-------------------------*/
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -538,10 +548,10 @@ template {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    /* margin: 18px, 0; */
+    margin: 18px 0;
     height: 30px;
     line-height: 30px;
-    /* padding: 0 42px; */
+    padding: 0 42px;
     min-width: 74px;
     box-sizing: border-box;
     font-size: 16px;
@@ -765,18 +775,7 @@ template {
 
 /*-------------------------*/
 
-/* input
----------------------------------------------------------------------------------- */
-input,select {
-    width: 100%;
-    height: 1.7rem;
-    padding: 3px;
-    margin: .5em 0;
-    border-radius: 2px;
-    vertical-align: middle;
-    border: 1px rgb(199, 199, 199) solid;
-}
-/*-------------------------*/
+
 /* $Typography 
 ---------------------------*/
 

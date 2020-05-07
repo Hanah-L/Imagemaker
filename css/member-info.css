@@ -1,0 +1,512 @@
+.member{
+    min-height: 100vh;
+    padding: 3rem 0;
+}
+h1.subtitle{
+    margin:20px 0;
+}
+.member-info li.form-group{
+display: flex;
+align-items: center;
+}
+.member-info input,.member-info select{
+    flex: 1 1 0;
+} 
+    
+.member-info li.form-group label {
+    flex: 0 0 70px;
+}
+select.other-width,input.other-width{
+    width: 25%;
+    flex: 0 0 25%;
+    height: auto;
+}
+.member-info #zipcode{
+    height: auto;
+    line-height:normal;
+}
+.member-info .address .other-width{
+margin-left:1rem ;
+}
+.record-test{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+/*icon
+ ========================================================================= */
+    .member-icon {
+        position: fixed;
+        top: 100px;
+        left: 3rem;
+        z-index: 99;
+    }
+    
+    /* .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #f9f9f9;
+        margin: 10px 0;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+        transition: .3s;
+    } */
+    
+    .circle:hover .icon-btn,
+    circle:active .icon-btn{
+        transform: translateY(4px);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+    }
+    .circle .icon-btn .icon:hover{
+        transform: translateY(0);
+        color: #bf2944;
+    }
+    .circle .icon-btn {
+        /* line-height: 30px;
+        height: 30px;
+        width: 30px; */
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #f9f9f9;
+        margin: 10px 0;
+        font-size: 30px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+        color: #bf2944;
+        margin: 9px 0;
+        text-align: center;
+    }
+    .circle .icon-btn .icon:before{
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+    }
+    
+
+    @media (max-width: 768px) {
+        .member-icon {
+            width: 100%;
+            background-color: #3a4035;
+            top: auto;
+            bottom: 0;
+            left: 0;
+        }
+        .circle {
+            display: inline-block;
+            margin: 5px 20px;
+        }
+    }
+    /* ====================================================================================== */
+  
+        
+    /* card
+    ---------------------------*/
+
+    .record-test .box-group {
+        /* width: 80%; */
+        margin-left: 14%;
+        flex: 1 1 0;
+        justify-content: space-between;
+    }
+
+    
+    .record-test .box {
+        width: 230px;
+        padding:16px;
+        border: 2px solid #ffbb83;
+    }
+    
+
+    .record-test .box .title {
+        font-weight: 600;
+        position: absolute;
+        top: -1rem;
+    }
+    
+
+    
+    .record-test .boxClip {
+        /* flex: 1 1 0; */
+        padding:0 2rem 0 5rem;
+        text-align: right;
+        clip-path: polygon( 0% 0%,100% 0,100% 100%, 0% 100%, 30px 50%);
+    }
+    
+    .record-test .boxClip .testTitle {
+        font-weight: 600;
+        line-height: 8rem;
+    }
+    
+    .record-test .box-group>h1{
+        top: -4rem;
+        left: 0;
+        }
+
+    
+    @media (max-width: 768px) {
+        .record-test{
+            position: relative;
+            padding: 0 16px;
+        }
+        .record-test .box-group {
+            flex-wrap: wrap;
+            width: 100%;
+            margin:2rem 0;
+            justify-content: center;
+        }
+        .record-test .box{
+            margin: 1rem 0;
+        }
+        .record-test .box .title{
+            top:0;
+        }
+        .record-test .box-group>h1{
+            top: -5rem;
+            }
+            select.other-width,input.other-width{
+                width:100%;
+                flex:1 1 0;
+            }
+    }
+    
+
+   
+    
+ 
+
+
+    /*-------------------------*/
+    /* $Member-love
+    ---------------------------*/
+    
+    .itemBox-group {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 16px;
+    }
+    
+    .itemBox {
+        width: 200px;
+        margin: 0px 10px;
+    }
+    
+    .imgBox {
+        width: 200px;
+        margin: 0;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+        background-color: #fff;
+    }
+    
+    .detail>* {
+        padding: 10px 10px 10px 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .member-love {
+            padding-top: 10px;
+        }
+        .itemBox-group .py-2 {
+            padding: 0;
+        }
+        .itemBox-group {
+            padding-left: 3%;
+        }
+        .itemBox {
+            width: 42%;
+        }
+        .imgBox {
+            width: 150px;
+        }
+        .detail>* {
+            padding: 10px 0;
+        }
+    }
+    /*-------------------------*/
+    /* $Member-order
+    ---------------------------*/
+    
+    .orderList {
+        width: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        margin: 16px auto;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+    }
+    
+    @media (max-width: 768px) {
+        .orderList {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            margin: 16px auto;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0);
+        }
+    }
+    
+    .orderListTitle {
+        width: 100%;
+        background-color: #3a4035;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .labelTitle {
+        background-color: #3a4035;
+        border: 1px solid #3a4035;
+        color: #fff;
+        padding: 10px 0;
+    }
+    
+    .labelTitle:focus {
+        outline: 0;
+    }
+    
+    .labelTitle option {
+        background-color: #fff;
+        color: #3a4035;
+    }
+    
+    .orderListDetail-group {
+        width: 100%;
+        /* border: 1px solid #3a4035; */
+    }
+    
+    .orderListDetail {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    
+    .orderListDetail:nth-child(odd) {
+        background-color: #ffbb83;
+    }
+    
+    .orderList .label {
+        width: 110px;
+        margin: 2px;
+    }
+    
+    @media (max-width: 768px) {
+        .orderListDetail {
+            padding: 5px;
+        }
+        .orderList .label {
+            font-size: 16px;
+        }
+    }
+    /* 點選後細節 */
+    
+    .popup-detail {
+        width: 100%;
+    }
+    
+    .detailBox-group {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .space-line {
+        width: 100%;
+        height: 1px;
+        background-color: #3a4035;
+    }
+    
+    .detailBox {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    
+    .detailBox h6 {
+        padding-top: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .orderListTitle {
+            width: 100%;
+            background-color: inherit;
+            color: inherit;
+            display: flex;
+            justify-content: space-around;
+        }
+        .labelTitle {
+            background-color: #f9f9f9;
+            border: 1px solid #fff;
+            color: #3a4035;
+            padding: 0;
+        }
+        .orderListDetail:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .detailBox {
+            width: 100%;
+            padding: 5px;
+        }
+    }
+    
+    .info-middle {
+        text-align: start;
+    }
+    
+    .info-right {
+        text-align: start;
+    }
+    
+    .ml {
+        width: 40px;
+        height: 15px;
+        background-color: #3A4035;
+        color: #fff;
+        font-size: 12px;
+        display: inline-block;
+        margin-right: 10px;
+        line-height: 15px;
+        text-align: center;
+    }
+    
+    .quantity {
+        display: inline-block;
+        font-size: 12px;
+    }
+    
+    .detailBox.ps {
+        flex-direction: column;
+        text-align: start;
+        padding-left: 16px;
+    }
+    
+    .detailBox .coupon {
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        /* justify-content: space-between; */
+        text-align: start;
+        padding-left: 10px;
+        clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+        background-color: #bf2944;
+        color: #fff;
+    }
+    
+    .detailBox .price {
+        padding-left: 70%;
+    }
+    
+    .popup-detail .imgBox {
+        width: 80px;
+    }
+    
+    @media (max-width:768px) {
+        .detailBox.ps.font-bold {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .detailBox .coupon {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            text-align: start;
+            padding-left: 10px;
+            color: #fff;
+        }
+        .detailBox .price {
+            display: inline-block;
+            padding-left: 0;
+        }
+        .detailBox .price .font-bold {
+            font-weight: 400;
+        }
+    }
+    /*-------------------------*/
+    /* $Member-share
+    ---------------------------*/
+    
+    .myShareCard {
+        width: 1200px;
+        height: 450px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px auto;
+    }
+    
+    .myShareCard .left-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .myShareCard .imgBox {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
+    
+    .member-share .right-section,
+    .member-share .left-section {
+        padding: 20px;
+    }
+    
+    .right-section .name {
+        padding-top: 20px;
+    }
+    
+    .right-section .imgBox {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    }
+    
+    .myShareCard .inner {
+        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .25);
+        padding: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .myShareCard {
+            width: 100%;
+            height: 100%;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0);
+            background-color: #f9f9f9;
+        }
+        .right-section,
+        .left-section {
+            width: 100%;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        .right-section .name {
+            padding-top: 0px;
+        }
+        .right-section .name * {
+            font-size: 24px;
+        }
+        .right-section .imgBox {
+            width: 80px;
+            height: 80px;
+        }
+        .left-section .imgBox {
+            width: 90px;
+            height: 90px;
+        }
+    }
