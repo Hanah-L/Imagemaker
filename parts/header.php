@@ -18,11 +18,17 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="css/baseAdd.css">
+    <!-- baseAdd.css:為防止錯誤而新增一空白css -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/signin.css">
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="css/plugin/animate.css">
+    <link rel="stylesheet" href="css/news-lightbox.css">
+    <link rel="stylesheet" href="css/share-lightbox.css">
+    <link rel="stylesheet" href="css/member-info.css">
+    <link rel="stylesheet" href="css/Q-A.css">
 </head>
 <body>

@@ -40,13 +40,17 @@ if ($totalRows > 0) {
 // 分類資料
 // $c_sql = "SELECT * FROM categories WHERE parent_sid=0";
 
-function filterByFrangranceAndGender($frg,$ged){
+$c_sql = "SELECT * FROM `product_list` WHERE `frangrance` LIKE '花香調' AND `price` BETWEEN 1000 and 2000 AND `brand` LIKE 'Clean%' AND `gender` LIKE '女香'";
+$cates = $pdo->query($c_sql)->fetchAll();
+
+let $pData = $c_sql;
+function filterByFrangranceAndbrandAndPriceAndGender($pData){
     global $pdo;
-    $f_sql = "SELECT * FROM product_list WHERE `frangrance` LIKE '$frg' AND `gender` LIKE '$ged'";
+    $f_sql = "SELECT * FROM product_list WHERE `frangrance` LIKE '$frg' AND `brand` LIKE '$brd' AND `price` LIKE '$pri' AND `gender` LIKE '$ged' ";
     return $pdo->query($f_sql)->fetchAll();
 }
 
-$cates = filterByFrangranceAndGender("果香調","女香");
+$cates = filterByFrangranceAndbrandAndPriceAndGender('','','','');
 ChromePhp::log($cates);
 
 ?>
@@ -132,6 +136,18 @@ ChromePhp::log($cates);
 <?php include __DIR__ . '/parts/script.php'; ?>
 
 <script>
+
+
+    
+    // categories[];
+    // $frg是點選的香調內容: frangrance 6種: 花香調、果香調、綠葉調、木質調、海洋調、辛香調
+    // $brd是點選的品牌: brand 6種: Clean Beauty(Classic)、Clean Beauty(Reserve)、Clean Beauty(Avant Garden)、Miller Harris、Maison Francis Kurkdjian、FlorisLondon
+// price
+//  gender: 女香、男香、中性香
+    // function categories[$frg,$brd,$pri,$ged]
+        
+    // $cates = SELECT * FROM `product_list` WHERE `frangrance` LIKE '花香調' AND `price` BETWEEN 1000 and 2000 AND `brand` LIKE 'Clean%' AND `gender` LIKE '女香';
+        
     
 
     const btn = $('.add-to-cart-btn');
@@ -151,8 +167,15 @@ ChromePhp::log($cates);
             // }
             // $('.cart-count').text(total);
             countCartObj(data);
-        }, 'json');
+        }, 'json')
+        .done(function(){
+            alert("success");
+        })
+        .fail(function(){
+            alert("fail");
+        })
     });
+
 
 </script>
 

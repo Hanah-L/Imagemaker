@@ -16,6 +16,7 @@ $page_name = 'login';
 
     .btnbox {
         width: 300px;
+        margin-bottom: 2rem;
     }
 
     .container {
@@ -25,12 +26,12 @@ $page_name = 'login';
 </style>
 
 <?php
-$cookieEmail = '';
-if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
-    if($_COOKIE['isRemembered'] == 1){
-        $cookieEmail = $_COOKIE['email'];
-    }
-}
+// $cookieEmail = '';
+// if (isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
+//     if ($_COOKIE['isRemembered'] == 1) {
+//         $cookieEmail = $_COOKIE['email'];
+//     }
+// }
 ?>
 
 
@@ -48,7 +49,7 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
         <form name="form1" class="" method="post" onsubmit="return checkForm()">
             <!-- email輸入欄 -->
             <div class="form-group">
-                <input type="email" class="form-control" id="email" name="email" placeholder="請輸入email" value="<?= $cookieEmail ?>" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="請輸入email" value="" required>
                 <small id="emailHelp" class="form-text"></small>
             </div>
             <!-- 密碼輸入欄 -->
@@ -57,7 +58,9 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
                 <small id="passwordHelp" class="form-text"></small>
                 <!-- 測試登入，暫不顯示再次確認密碼 -->
             </div>
-            <input type="checkbox" name="remember" id="" value="" checked="checked" autocomplete="off">
+            <label>
+                <input type="checkbox" name="remember" id="" value="記住我的帳號" check="check" autocomplete="off">記住我的帳號
+            </label>
             <!-- 5/4記住我的帳號功能確認刪除 -->
             <div class="btnbox">
                 <button type="submit" class="btn-group btns btn--primary">登入</button>
@@ -65,7 +68,7 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
                 <button class="btn-group btns btn--secondary">忘記密碼</button>
         </form>
 
-       
+
     </div>
 
     <?php include __DIR__ . '/parts/script.php'; ?>
@@ -95,8 +98,6 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
 
             return false;
         }
-
-        
     </script>
 
     <?php include __DIR__ . '/parts/footer.php'; ?>

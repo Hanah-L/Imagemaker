@@ -17,7 +17,7 @@ if (!empty($pKeys)) {
 }
 
 ?>
-<?php include __DIR__ . '/parts/html-head.php'; ?>
+<?php include __DIR__ . '/parts/header.php'; ?>
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 
 <div class="container">

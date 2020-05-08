@@ -81,7 +81,7 @@ $page_name = 'news';
             </div>
         </section>
         <div class="position-relative">
-            <h1 class="subtitle">染香分享</h1>
+            <!-- <h1 class="subtitle">染香分享</h1> -->
             <!-- Start Share -->
 
             <?php include __DIR__ . '/share.php'; ?>

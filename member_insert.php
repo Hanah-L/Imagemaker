@@ -48,18 +48,19 @@ $cities = $stmtCity->fetchAll();
         123
     </div>
 
+    <!-- 套終版後確認地址的排列方式 -->
     <div class="row">
         <div class="col-lg-6">
             <form name="form1" method="post" onsubmit="return checkForm()" novalidate>
                 <div class="form-group">
-                    <label for="name">* 姓名</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <label for="namel">* 姓名</label>
+                    <input type="text" class="form-control" id="namel" name="namel" required>
                     <small id="nameHelp" class="form-text"></small>
                 </div>
                 <div class="form-group">
-                    <!-- email的檢查條件在下面count email_re -->
-                    <label for="email">* Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required value="<?= $cookieEmail ?>">
+                    <!-- email的檢查條件在signin.php的count email_re，這裡是直接帶過來 -->
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" readonly style="background:rgb(235,235,228)" value="<?= $_SESSION['email'] ?>">
                     <small id="emailHelp" class="form-text"></small>
                 </div>
                 <div class="form-group">
@@ -121,10 +122,10 @@ $cities = $stmtCity->fetchAll();
 <?php include __DIR__ . '/parts/script.php'; ?>
 
 <script>
-    const email_re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+    // const email_re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
     // const mobile_re = /^09\d{2}-?\d{3}-?\d{3}$/; 上面已檢查過手機號碼格式，故這裡不需再次檢查
 
-    const $name = $('#name'),
+    const $namel = $('#namel'),
         $mobile = $('#mobile'),
         $email = $('#email'),
         $nameHelp = $('#nameHelp'),
@@ -134,7 +135,7 @@ $cities = $stmtCity->fetchAll();
     function checkForm() {
         let isPass = true; // 有沒有通過檢查
         // 回復提示設定
-        $name.css('border-color', '#CCCCCC');
+        $namel.css('border-color', '#CCCCCC');
         $nameHelp.text('');
 
         $email.css('border-color', '#CCCCCC');
@@ -143,19 +144,19 @@ $cities = $stmtCity->fetchAll();
         $mobile.css('border-color', '#CCCCCC');
         $mobileHelp.text('');
 
-        if ($name.val().length < 2) {
-            $name.css('border-color', 'red');
+        if ($namel.val().length < 2) {
+            $namel.css('border-color', 'red');
             $nameHelp.text('請填寫正確的姓名喔');
             isPass = false;
         }
 
-        if ($email.val()) {
-            if (!email_re.test($email.val())) {
-                $email.css('border-color', 'red');
-                $emailHelp.text('請填寫正確的 Email 格式喔');
-                isPass = false;
-            }
-        }
+        // if ($email.val()) {
+        //     if (!email_re.test($email.val())) {
+        //         $email.css('border-color', 'red');
+        //         $emailHelp.text('請填寫正確的 Email 格式喔');
+        //         isPass = false;
+        //     }
+        // }
 
         // 手機不是必填，但填了以後要檢查是否符合格式
         // if (!mobile_re.test($mobile.val())) {
@@ -166,11 +167,12 @@ $cities = $stmtCity->fetchAll();
 
         if (isPass) {
             $.post('member_insert-api.php', $(document.form1).serialize(), function(data) {
+                console.log(data);
                 if (data.success) {
                     $('#info-bar').show().text('新增成功囉');
-                    // setTimeout(function() {
-                    //     location.href = 'imagemaker.php';
-                    // }, 1000);
+                    setTimeout(function() {
+                        location.href = 'imagemaker.php';
+                    }, 1000);
                 } else {
                     $('#info-bar').show().text('新增失敗了，請重新確認喔');
                 }

@@ -71,13 +71,13 @@
                         <div class="col-3-5 d-flex">
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">費洛蒙製造機，約會必敗款!</h2>
+                                    <h2 class="situationTitle font-black">無法抗拒的撲倒香!</h2>
                                 </div>
                                 <a href=""><img class="image" src="images/pexels-photo-3365555.jpeg" alt=""></a>
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">帶著它，整個城市都是你的伸展台!</h2>
+                                    <h2 class="situationTitle font-black">小香，你的最佳助手!</h2>
                                 </div>
                                 <a href=""><img class="image" src="images/pexels-photo-995470.jpeg" alt=""></a>
                             </div>
@@ -119,7 +119,7 @@
                             </div>
                             <div class="imgBox_inner">
                                 <div class="text">
-                                    <h2 class="situationTitle font-black">清新優雅就是你的專屬代名詞!</h2>
+                                    <h2 class="situationTitle font-black">清新優雅，你的專屬代名詞!</h2>
                                 </div>
                                 <a href=""><img class="image" src="images/selective-focus-photo-of-woman-in-a-striped-dress-sitting-on-3760271.jpeg" alt=""></a>
                             </div>
@@ -131,10 +131,11 @@
     </section>
     <!-- End Situation  -->
 
-<?php include __DIR__.'/share.php'; ?>
+    <!-- <a href="news.php" class="indexTitle more font-black">染香分享</a> -->
+<?php include __DIR__.'/share-index.php'; ?>
 
     <!-- Start About -->
-    <section class="about">
+    <section class="about" id="aboutus">
         <div class="mask">
             <div class="container">
                 <div class="section_all d-flex justify-content-center align-items-center ">

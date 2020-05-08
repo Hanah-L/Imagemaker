@@ -3,6 +3,28 @@ require __DIR__ . '/_connect_db.php';
 $page_name = 'signin';
 ?>
 
+<?php
+if (isset($_POST['email']) and isset($_POST['password'])) {
+
+    $sql = "INSERT INTO `member_list`(`email`,`password`) VALUES (?, SHA1(?))";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute([
+        $_POST['email'],
+        $_POST['password'],
+    ]);
+    // echo $stmt->rowCount();
+    // exit;
+
+    if ($stmt->rowCount() == 1) {
+        $success = true;
+    } else {
+        $success = false;
+    }
+}
+?>
+
 <?php include __DIR__ . '/parts/header.php'; ?>
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 
@@ -11,21 +33,54 @@ $page_name = 'signin';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/SVG/ImageMaker_logo.svg" />
     <title>登入/註冊</title> -->
-    <!-- CSS link -->
-    <!-- <link rel="stylesheet" href="css/base.css">
+<!-- CSS link -->
+<!-- <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/signin.css"> -->
+<style>
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        /* Safari */
+        animation: spin 2s linear infinite;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
 
 </head>
 
 <?php
-$cookieEmail = '';
-if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
-    if($_COOKIE['isRemembered'] == 1){
-        $cookieEmail = $_COOKIE['email'];
-    }
-}
+// $cookieEmail = '';
+// if (isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
+//     if ($_COOKIE['isRemembered'] == 1) {
+//         $cookieEmail = $_COOKIE['email'];
+//     }
+// }
 ?>
 
 <body>
@@ -40,22 +95,20 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
             <div class="title d-flex justify-content-center">
                 <h2 class="font-bold font-primary text-center">註冊</h2>
             </div>
-            <form name="signin-form" class="signin-form" method="post" onsubmit="return signinForm()">
-
+            <!-- <div name="info-bar" class="alert alert-info" role="alert" style="display: none">
+        </div> -->
+            <form name="signin_form" class="signin-form" method="post" onsubmit="return signinForm()">
                 <ul class="flex-column">
                     <li>
-                        <input type="email" class="" id="email" name="email" placeholder="請輸入email"
-                            value="<?= $cookieEmail ?>" required>
+                        <input type="email" class="" id="email" name="email" placeholder="請輸入email" value="" required>
                         <small id="emailHelp" class="form-text"></small>
                     </li>
                     <li>
-                        <input type="password" class="" id="password" name="password" placeholder="請輸入密碼"
-                            value="<?= $cookiePassword ?>" required>
+                        <input type="password" class="" id="password" name="password" placeholder="請輸入密碼" required>
                         <small id="emailHelp" class="form-text"></small>
                     </li>
                     <li>
-                        <input type="password" class="signin" id="password" name="password" placeholder="請再次輸入密碼"
-                            required>
+                        <input type="password" class="signin" id="comfirm_pwd" name="comfirm_pwd" placeholder="請再次輸入密碼" required>
                         <!-- 再次輸入密碼的small先不下，因要抓取輸入密碼input的值，待與老師確認 -->
                     </li>
                     <li class="d-flex align-items-center toterm">
@@ -72,21 +125,21 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
 
                 </ul>
                 <div class="d-flex justify-content-center ">
-                    <button type="submit" class="btn btn--primary">創建新帳號 </button>
+                    <button type="submit" class="btn btn--primary" id="registerButton">創建新帳號 </button>
                     <!-- <button class=" btn btn--secondary">忘記密碼 </button> -->
+                    <div class="loader" id="loadview" style="display:none"></div>
                 </div>
+
 
             </form>
         </div>
     </section>
 
-
-
     <section class="Lightbox term none">
         <div class="fake">
             <!-- 加一個假的底當感應區 -->
         </div>
-        <div class="d-flex  position-relative align-items-center">
+        <div class="d-flex position-relative align-items-center">
             <i class="icon icon-cancel"></i>
             <div class="termBox">
                 <div class="title font-primary font-bold text-center">使用條款</div>
@@ -106,26 +159,64 @@ if(isset($_COOKIE['isRemembered']) && isset($_COOKIE['email'])) {
         </div>
     </section>
     <!-- PHP end -->
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+
     <script>
-        function signinForm(){
-            $.post('signin-api.php', $(document.signin-form).serialize(), function(data) {
-                if (data.success) {
-                    // info-bar應該是bootstrap的內建的提示樣式，不用bootstrap要如何跳出提示，跳出什麼提示待確
-                    // 老師說看我們要怎麼顯示
-                    $('#info-bar').show().text('新增成功，請填寫會員資料');
+        const email_re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
 
-                    setTimeout(function() {
-                        location.href = 'login.php';
-                    }, 1000);
+        function signinForm() {
+            $("#registerButton").hide();
+            $('#loadview').show();
 
-                } else {
-                    $('#info-bar').show().text('註冊失敗，請確認帳號或密碼是否有誤');
+            $.post('signin-api.php', $(document.signin_form).serialize(), function(data) {
+                    console.log(data);
 
-                }
-            }, 'json');
+                    if (data.success) {
+                        // info-bar應該是bootstrap的內建的提示樣式，不用bootstrap要如何跳出提示，跳出什麼提示待確
+                        // 老師說看我們要怎麼顯示
+                        // $('#info-bar').show().text('新增成功，請填寫會員資料');
+                        // console.log("zzzzzzzzz");
+                        setTimeout(function() {
+                            location.href = 'member_insert.php';
+                        }, 1000);
+
+                    } else {
+                        // $('#info-bar').show().text('註冊失敗，請確認帳號或密碼是否有誤');
+                        // console.log("11111112");
+                        $("#registerButton").hide();
+                        $('#loadview').hide();
+
+                    }
+                }, 'json')
+                // .done(function() {
+                //     alert("success");
+                // })
+                // .fail(function() {
+                //     alert("fail");
+                // })
 
             return false;
+
+            // if ($email.val()) {
+            //     if (!email_re.test($email.val())) {
+            //         $email.css('border-color', 'red');
+            //         $emailHelp.text('請填寫正確的 Email 格式喔');
+            //         isPass = false;
+            //     }
+            // }
+
+            // if ($password.val()) {
+            // if ($password === $comfirm_pwd) {
+            //     console.log("i am pwdcheck");
+            //     $output['success'] = true;
+            //     $output['error'] = '';
+            // } else {
+            //     console.log("i am pwdcheck wrong");
+            //     $output['error'] = '密碼有誤，請重新輸入';
+            // }
+            // }
         }
     </script>
 </body>

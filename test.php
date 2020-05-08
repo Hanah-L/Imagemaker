@@ -403,7 +403,12 @@ $page_name = 'test';
                                 <h3>${ans.s}</h3>
                                 <h4>${ans.c}</h4>
                             </div>
-                        </div>   
+                        </div>  
+                        <aside class="aside-recommend">
+                <div class="label-btn">
+                    <a class="clip-ld" href="">代表香水</a>
+                </div>
+            </aside> 
                         `
                         $("#DetailShow").empty().append(ansShow);
                         return true
@@ -411,9 +416,9 @@ $page_name = 'test';
                 })
             }
 
-// 這裡的按鈕記得放連結
-// 重新測驗連結至testcover.php
-// 代表香水連結放已根據測驗結果篩選出的商品列表前兩個商品，連結product_list.php? 或是直接寫死各選項各抓2個固定分類商品
+            // 這裡的按鈕記得放連結
+            // 重新測驗連結至testcover.php
+            // 代表香水連結放已根據測驗結果篩選出的商品列表前兩個商品，連結product_list.php? 或是直接寫死各選項各抓2個固定分類商品
             let endShow =
                 `
             <div class="perfumeTest d-flex justify-content-between">
@@ -424,11 +429,7 @@ $page_name = 'test';
                     <a href="testcover.php" class="clip-ld">重新測驗</a>
                 </div>
             </div>
-            <aside class="aside-recommend">
-                <div class="label-btn">
-                    <a class="clip-ld" href="">代表香水</a>
-                </div>
-            </aside>
+            
             `
             $("#DetailShow").append(endShow);
 

@@ -5,7 +5,8 @@ $page_name = 'share';
     <!-- Start Share -->
     <!-- TODO hover內容 -->
     <div class="position-relative">
-        <a href="news.html" class="indexTitle more font-black">染香分享</a>
+        <!-- <a href="news.php" class="indexTitle more font-black">染香分享</a> -->
+        <h1 class="subtitle">染香分享</h1>
         <section class="share">
             <div class="container">
                 <div class="imgBox_group row">

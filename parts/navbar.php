@@ -20,8 +20,8 @@ if(!isset($page_name)){
                 <li class="nav"><a href="news.php">染香分享</a></li>
                 <li class="nav"><a href="testcover.php">選香測試</a></li>
                 <!-- <li class="nav"><a href="knowledge.html">香水知識</a></li> -->
-                <li class="nav"><a href="QnA.html">Q & A</a> </li>
-                <li class="nav"><a href="index.html#about">關於我們</a></li>
+                <li class="nav"><a href="Q-A.php">Q & A</a> </li>
+                <li class="nav"><a href="#aboutus">關於我們</a></li>
             </ul>
             <ul class="icon-group--center row mobile-none position-relative">
                 <!-- 未登入 -->
@@ -78,8 +78,8 @@ if(!isset($page_name)){
                 <li><a href="news.php" class="popup-menu__item">染香分享</a></li>
                 <li><a href="testcover.php" class="popup-menu__item">選香測試</a></li>
                 <!-- <li><a href="knowledge.html" class="popup-menu__item">香水知識</a></li> -->
-                <li><a href="QnA.html" class="popup-menu__item">Q & A</a></li>
-                <li><a href="index.html#about" class="popup-menu__item">關於我們</a></li>
+                <li><a href="Q-A.php" class="popup-menu__item">Q & A</a></li>
+                <li><a href="#aboutus" class="popup-menu__item">關於我們</a></li>
             </ul>
         </div>
         <!-- End 手機隱藏選單 -->
