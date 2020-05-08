@@ -1,5 +1,5 @@
 // JQ版本
-//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> */}
 //================== nev =========================================
 
 //=====================header-scroll
@@ -166,11 +166,11 @@ $('.footer').find('i').click(function () {
 //================index-bg============================================================
 // 要放最下面!!!!會因找不到bg-svg而影響其他元素
 
-var bartop = $(".bg-svg").offset().top;
+
 
 // // console.log(stop);
 $(window).scroll(function () {
-
+    var bartop = $(".bg-svg").offset().top
     // var bartop = $(".bg-svg").offset().top;
     let scrollTop = $(window).scrollTop();
     if (scrollTop > bartop) {

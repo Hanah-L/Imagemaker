@@ -93,7 +93,7 @@ CREATE TABLE `product_list` (
   `product_num` varchar(255) NOT NULL,
   `brand` varchar(255) NOT NULL,
   `product_name` varchar(255) NOT NULL,
-  `product_name_c` varchar(255) DEFAULT NULL,
+  -- `product_name_c` varchar(255) DEFAULT NULL,
   `ml` int(11) NOT NULL,
   `frangrance` varchar(255) NOT NULL,
   `top_note1` varchar(255) NOT NULL,
